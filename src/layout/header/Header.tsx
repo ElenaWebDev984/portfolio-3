@@ -10,7 +10,7 @@ export const items = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact',]
 export const Header = () => {
     return (
         <StyledHeader>
-            <H1SEO>Web developer</H1SEO>
+            <H1>Web developer</H1>
             <FlexWrapper justifyContent="space-between" alignItems={'center'}>
                 <Logo/>
                 <Menu menuItems={items}/>
@@ -24,7 +24,7 @@ const StyledHeader = styled.header`
 
 `
 
-const H1SEO = styled.h1`
-
+const H1 = styled.h1`
+    display: none;
 `
 
