@@ -23,12 +23,12 @@ const StyledMain = styled.section`
     min-height: 100vh;
 `
 
-const MainTitle = styled.h1`
+const MainTitle = styled.h2`
     // TODO change to P, create h1 in header con SEO (web developer, react developer, frontend developer, 2 years...)
 
 `
 
-const Name = styled.h2`
+const Name = styled.p`
 
 `
 
