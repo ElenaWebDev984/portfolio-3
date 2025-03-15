@@ -5,26 +5,26 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 export const Main = () => {
     return (
         <StyledMain>
-            <FlexWrapper alignItems={'center'} justifyContent={'space-between'}>
-                <div>
-                    <SmallText>Hi there! 👋</SmallText>
-                    <Name>I'm <span>Elena</span>,</Name>
-                    <MainTitle>a <span>web developer</span></MainTitle>
-                    <MainText>I craft responsive websites where technologies meet creativity</MainText>
-                    <button type={'submit'}>Contact me!!!</button>
-                </div>
-                <Photo src={photo} alt="foto"/>
+            <FlexWrapper direction={'column'} >
+                <SmallText>Hi there! 👋</SmallText>
+                <Name>I'm <span>Elena</span></Name>
+                <MainTitle>a <span>web developer</span></MainTitle>
+                <MainText>I craft responsive websites where technologies meet creativity</MainText>
+                <button type={'submit'}>Contact me!!!</button>
             </FlexWrapper>
+            <Photo src={photo} alt="foto"/>
         </StyledMain>
     );
 };
 
 const StyledMain = styled.section`
     min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
 `
 
 const MainTitle = styled.h2`
-    
+
 
 `
 
