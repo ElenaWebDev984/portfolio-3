@@ -9,7 +9,7 @@ export const Slogan = () => {
         <StyledSlogan>
            <FlexWrapper direction={'column'} alignItems={'center'} >
                <StyledSloganText>More projects I’ve worked on:</StyledSloganText>
-               <IconPlusSpanDiv iconId={'github-contact'} spanText={'@john-doe on github'} />
+               <IconPlusSpanDiv iconId={'github-contacts'} spanText={'@john-doe on github'} width={'30px'} height={'30px'} viewBox={'-10 -6 50 50'} />
            </FlexWrapper>
         </StyledSlogan>
     );
