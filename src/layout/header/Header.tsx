@@ -3,6 +3,7 @@ import {Logo} from "../../components/logo/Logo.tsx";
 import {Menu} from "../../components/menu/Menu.tsx";
 import {MenuContact} from "../../components/menu/MenuContact.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
+import {Container} from "../../components/Container.tsx";
 
 export const items = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact',]
 
@@ -11,17 +12,19 @@ export const Header = () => {
     return (
         <StyledHeader>
             <H1>web developer, react developer, frontend developer, 2 years</H1>
-            <FlexWrapper justifyContent="space-between" alignItems={'center'}>
-                <Logo/>
-                <Menu menuItems={items}/>
-                <MenuContact/>
-            </FlexWrapper>
+            <Container>
+                <FlexWrapper justifyContent="space-between" alignItems={'center'}>
+                    <Logo/>
+                    <Menu menuItems={items}/>
+                    <MenuContact/>
+                </FlexWrapper>
+            </Container>
         </StyledHeader>
     );
 };
 
 const StyledHeader = styled.header`
-
+    
 `
 
 const H1 = styled.h1`
