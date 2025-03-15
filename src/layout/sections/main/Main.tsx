@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import photo from '../../../assets/images/foto.webp'
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {Button} from "../../../components/Button.tsx";
 
 export const Main = () => {
     return (
@@ -10,9 +11,11 @@ export const Main = () => {
                 <Name>I'm <span>Elena</span></Name>
                 <MainTitle>a <span>web developer</span></MainTitle>
                 <MainText>I craft responsive websites where technologies meet creativity</MainText>
-                <button type={'submit'}>Contact me!!!</button>
+                <Button type={'submit'}>Contact me!!!</Button>
             </FlexWrapper>
-            <Photo src={photo} alt="foto"/>
+            <PhotoWrapper>
+                <Photo src={photo} alt="foto"/>
+            </PhotoWrapper>
         </StyledMain>
     );
 };
@@ -44,4 +47,8 @@ const Photo = styled.img`
     width: 350px;
     height: 350px;
     object-fit: cover;
+`
+
+const PhotoWrapper = styled.div`
+
 `
