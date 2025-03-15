@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Icon} from "../icon/Icon.tsx";
 
 
+
 export const MenuContact = () => {
     return (
         <StyledMenuContact>
@@ -23,6 +24,30 @@ export const MenuContact = () => {
         </StyledMenuContact>
     );
 };
+
+
+// type MenuIcon = {
+//     iconId: string;
+// }
+//
+// type MenuContactPropsType = {
+//     menuIcons: MenuIcon[]
+// }
+//
+// export const MenuContact = (props: MenuContactPropsType) => {
+//     return (
+//         <StyledMenuContact>
+//             <li>
+//                 {menuIcons.map((item, index) => {
+//                     return  <MenuIcon key={index}>
+//                         <a href="">{item}</a>
+//                     </MenuIcon>
+//                 })}
+//             </li>
+//         </StyledMenuContact>
+//     );
+// };
+
 
 const StyledMenuContact = styled.ul`
     display: flex;

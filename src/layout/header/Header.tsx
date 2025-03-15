@@ -1,11 +1,18 @@
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo.tsx";
 import {Menu} from "../../components/menu/Menu.tsx";
-import {MenuContact} from "../../components/menu/MenuContact.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {Container} from "../../components/Container.tsx";
+import {MenuContact} from "../../components/menu/MenuContact.tsx";
+
 
 export const items = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact',]
+
+// export const icons = [
+//     { iconId: 'github-contacts' },
+//     { iconId: 'linkedin' },
+//     { iconId: 'telegram' },
+// ]
 
 
 export const Header = () => {
@@ -16,7 +23,8 @@ export const Header = () => {
                 <FlexWrapper justifyContent="space-between" alignItems={'center'}>
                     <Logo/>
                     <Menu menuItems={items}/>
-                    <MenuContact/>
+                    {/*<MenuContact menuIcons={icons}/>*/}
+                    <MenuContact />
                 </FlexWrapper>
             </Container>
         </StyledHeader>
