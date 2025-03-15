@@ -24,7 +24,7 @@ const StyledMain = styled.section`
 `
 
 const MainTitle = styled.h2`
-    // TODO change to P, create h1 in header con SEO (web developer, react developer, frontend developer, 2 years...)
+    
 
 `
 

@@ -28,3 +28,4 @@ const H1 = styled.h1`
     display: none;
 `
 
+// TODO in h1 to do for SEO (web developer, react developer, frontend developer, 2 years...)
