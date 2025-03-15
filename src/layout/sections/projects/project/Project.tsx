@@ -17,8 +17,8 @@ export const Project = (props: ProjectPropsType) => {
             <Text>{props.text}</Text>
             <StackText><span>Tech stack : </span> HTML , JavaScript, SASS, React</StackText>
             <StyledProjectLinkWrapper>
-                <IconPlusSpanDiv iconId={'chain-projects'} spanText={'Live Preview'}/>
-                <IconPlusSpanDiv iconId={'github-projects'} spanText={'View Code'}/>
+                <IconPlusSpanDiv iconId={'chain-projects'} spanText={'Live Preview'} width={'20px'} height={'20px'} viewBox={'-5 -5 30 30'}/>
+                <IconPlusSpanDiv iconId={'github-projects'} spanText={'View Code'} width={'20px'} height={'20px'} viewBox={'-5 -5 30 30'}/>
             </StyledProjectLinkWrapper>
         </StyledProject>
     );
