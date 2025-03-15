@@ -11,8 +11,6 @@ export const Footer = () => {
         <StyledFooter>
            <FlexWrapper justifyContent="space-between">
                <Logo/>
-               {/*<IconPlusSpanDiv iconId={'phone'} spanText={'+91 12345 09876'}/>*/}
-               {/*<IconPlusSpanDiv iconId={'email'} spanText={'info@example.com'}/>*/}
                <MenuContact/>
            </FlexWrapper>
             <FlexWrapper justifyContent="space-between">
