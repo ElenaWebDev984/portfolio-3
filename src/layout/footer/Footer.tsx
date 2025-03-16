@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo.tsx";
-import {Menu} from "../../components/menu/Menu.tsx";
 import {MenuContact} from "../../components/menu/MenuContact.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {items} from "../header/Header.tsx";
 import {Container} from "../../components/Container.tsx";
+import {HeaderMenu} from "../header/headerMenu/HeaderMenu.tsx";
 
 
 export const Footer = () => {
@@ -16,7 +16,7 @@ export const Footer = () => {
                    <MenuContact/>
                </FlexWrapper>
                <FlexWrapper justifyContent="space-between">
-                   <Menu menuItems={items}/>
+                   <HeaderMenu menuItems={items}/>
                    <StyledFooterText>© 2025 Designed and built by <span>Elena</span> with <span>Love</span> & <span>Coffee</span></StyledFooterText>
                </FlexWrapper>
            </Container>
