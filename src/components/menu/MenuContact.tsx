@@ -2,6 +2,26 @@ import styled from "styled-components";
 import {Icon} from "../icon/Icon.tsx";
 
 
+// type MenuContactPropsType = {
+//     iconIds: string[]
+//     gap?: string;
+// }
+//
+// type StyledMenuContactPropsType = {
+//     gap?: string;
+// }
+
+
+// export const MenuContact = (props: MenuContactPropsType) => {
+//     return (
+//         <StyledMenuContact gap={props.gap}>
+//
+//             {props.iconIds.map((itemId, index) => {
+//                 return  <li key={index}>
+//                     <a href="">{itemId}</a>
+//                 </li>
+//             })}
+
 export const MenuContact = () => {
     return (
         <StyledMenuContact>
@@ -25,30 +45,13 @@ export const MenuContact = () => {
 };
 
 
-// type MenuIcon = {
-//     iconId: string;
-// }
-//
-// type MenuContactPropsType = {
-//     menuIcons: MenuIcon[]
-// }
-//
-// export const MenuContact = (props: {menuItems: Array<string>}) => {
-//     return (
-//         <StyledMenuContact>
-//             <li>
-//                 {menuIcons.map((item, id) => {
-//                     return  <MenuIcons key={id}>
-//                         <a href="">{item}</a>
-//                     </MenuIcons>
-//                 })}
-//             </li>
-//         </StyledMenuContact>
-//     );
-// };
-
-
 const StyledMenuContact = styled.ul`
     display: flex;
     gap: 20px;
 `
+
+
+// const StyledMenuContact = styled.ul<StyledMenuContactPropsType>`
+//     display: flex;
+//     gap: ${props => props.gap || undefined};
+// `
