@@ -10,6 +10,11 @@ import projectImg4 from '../../../assets/images/proj4.webp';
 import projectImg5 from '../../../assets/images/proj5.webp';
 import projectImg6 from '../../../assets/images/proj6.webp';
 import {Container} from "../../../components/Container.tsx";
+import {Menu} from "../../../components/menu/Menu.tsx";
+
+export const items = ['All', 'HTML', 'JavaScript', 'SASS', 'React',]
+
+export const itemsStack = ['HTML', 'JavaScript', 'SASS', 'React',]
 
 
 export const Projects = () => {
@@ -18,6 +23,7 @@ export const Projects = () => {
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <SectionText>Things I’ve built so far</SectionText>
+                <Menu menuItems={items}/>
                 <FlexWrapper wrap={'wrap'} gap={'60px 35px'}>
                     <Project title={'Project Tile goes here'} text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} src={projectImg1} alt={'project1'} />
                     <Project title={'Project Tile goes here'} text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} src={projectImg2} alt={'project2'} />
