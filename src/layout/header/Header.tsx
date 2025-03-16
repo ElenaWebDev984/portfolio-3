@@ -18,7 +18,7 @@ export const items = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact',]
 export const Header = () => {
     return (
         <StyledHeader>
-            <H1>web developer, react developer, frontend developer, 2 years</H1>
+            <H1>Web Developer, React Developer, Frontend Developer, 2 years, Portfolio, UI/UX Designer, Web Development, Responsive Design, JavaScript, React, TypeScript, HTML, CSS, Bootstrap, Tailwind CSS, Figma, Adobe XD, User Experience, User Interface, Cross-Browser Compatibility, Version Control (Git), GitHub Pages Agile Methodologies, RESTful APIs, Mobile-First Design, Performance Optimization, SEO Best Practices, Accessibility (a11y), Wireframe, Prototyping, Graphic Design, Animation, CSS Preprocessors (Sass, Less), Frontend Frameworks</H1>
             <Container>
                 <FlexWrapper justifyContent="space-between" alignItems={'center'}>
                     <Logo/>
