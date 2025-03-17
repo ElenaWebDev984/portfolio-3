@@ -26,5 +26,5 @@ const StyledIconPlusSpanDiv = styled.div`
 `
 
 const SpanForIconPlusSpanDiv = styled.span`
-
+    
 `
