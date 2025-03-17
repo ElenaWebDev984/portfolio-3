@@ -3,12 +3,13 @@ import photo from '../../../assets/images/foto.webp'
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Button} from "../../../components/Button.tsx";
 import {Container} from "../../../components/Container.tsx";
+import {theme} from "../../../styles/Theme.ts";
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper justifyContent={'space-between'} alignItems={'center'}>
+                <FlexWrapper justifyContent={'space-between'} alignItems={'center'} gap={'20px'}>
                     <div>
                         <SmallText>Hi there! 👋</SmallText>
                         <Name>I'm <span>Elena</span></Name>
@@ -28,32 +29,69 @@ export const Main = () => {
 const StyledMain = styled.section`
     min-height: 100vh;
     display: flex;
-    justify-content: space-between;
+    font-weight: 700;
+    font-size: 58px;
+    color: ${theme.colors.mainSectionFont};
+    letter-spacing: -0.02em;
 `
 
 const MainTitle = styled.h2`
-
-
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 58px;
+    
+    span {
+        background: ${theme.colors.linearGradientFont};
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        // background-clip: text;
+        // color: transparent;
+        // display: inline-block;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 `
 
 const Name = styled.p`
-
+    
+    span {
+        background: ${theme.colors.linearGradientFont};
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        white-space: nowrap;
 `
 
 const SmallText = styled.span`
-
+   
 `
 
 const MainText = styled.p`
-
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 42px;
+    margin-top: 20px
+;
 `
 
 const Photo = styled.img`
     width: 350px;
     height: 350px;
     object-fit: cover;
+    border-radius: 50%;
+    //width: 335px;
+    //height: 335px;
+    padding: 10px;
 `
 
 const PhotoWrapper = styled.div`
-    align-self: flex-end;
+    width: 350px;
+    height: 350px;
+    //border: 9px solid ;
+    border-radius: 50%;
+    background: ${theme.colors.linearGradientImg};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
 `
