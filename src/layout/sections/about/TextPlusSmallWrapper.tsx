@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../../../styles/Theme.ts";
 
 type TextPlusSmallWrapperPropsType = {
     text: string
@@ -22,9 +23,13 @@ const StyledTextPlusSmallWrapper = styled.div`
 `
 
 const AboutText = styled.p`
-
+    color: ${theme.colors.linkNavFont};
+    font-weight: 400;
+    font-size: 20px;
 `
 
 const AboutSmall = styled.small`
-
+    font-weight: 600;
+    font-size: 9px;
+    color: ${theme.colors.accentFont2};
 `
