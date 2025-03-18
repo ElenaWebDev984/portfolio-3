@@ -24,7 +24,7 @@ export const Projects = () => {
                 <SectionTitle>Projects</SectionTitle>
                 <SectionText>Things I’ve built so far</SectionText>
                 <Menu menuItems={items}/>
-                <FlexWrapper wrap={'wrap'} gap={'60px 35px'}>
+                <FlexWrapper justifyContent={'space-between'} wrap={'wrap'} gap={'60px 35px'}>
                     <Project title={'Project Tile goes here'} text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} src={projectImg1} alt={'project1'} />
                     <Project title={'Project Tile goes here'} text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} src={projectImg2} alt={'project2'} />
                     <Project title={'Project Tile goes here'} text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} src={projectImg3} alt={'project3'} />
