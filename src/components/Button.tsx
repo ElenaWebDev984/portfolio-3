@@ -7,6 +7,6 @@ export const Button = styled.button`
     font-weight: 600;
     font-size: 20px;
     cursor: pointer;
-    background-image: ${theme.colors.linearGradientImg};
+    background-image: ${theme.colors.linearGradientFont};
     color: ${theme.colors.h2h3Font};
 `
