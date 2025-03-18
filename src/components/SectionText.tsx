@@ -6,5 +6,5 @@ export const SectionText = styled.p`
     font-weight: 400;
     font-size: 32px;
     color: ${theme.colors.linkNavFont};
-    margin: 50px 0;
+    margin-bottom: 100px;
 `
