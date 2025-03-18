@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import {IconPlusSpanDiv} from "../../../components/IconPlusSpanDiv.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {theme} from "../../../styles/Theme.ts";
 
 
 
@@ -9,7 +9,7 @@ export const Slogan = () => {
         <StyledSlogan>
            <FlexWrapper direction={'column'} alignItems={'center'} >
                <StyledSloganText>More projects I’ve worked on:</StyledSloganText>
-               <IconPlusSpanDiv iconId={'github-contacts'} spanText={'@john-doe on github'} width={'30px'} height={'30px'} viewBox={'-10 -6 50 50'} />
+               <ContactSlogan>@john-doe on github</ContactSlogan>
            </FlexWrapper>
         </StyledSlogan>
     );
@@ -17,10 +17,22 @@ export const Slogan = () => {
 
 const StyledSlogan = styled.section`
     min-height: 30vh;
-    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 58px;
 `
 
 const StyledSloganText = styled.p`
-    
+   
+`
+
+const ContactSlogan = styled.span`
+    background: ${theme.colors.linearGradientFont};
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    margin-top: 10px;
 `
 
