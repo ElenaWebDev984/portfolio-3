@@ -42,11 +42,6 @@ const MainTitle = styled.h2`
     
     span {
         background: ${theme.colors.linearGradientFont};
-        // -webkit-background-clip: text;
-        // -webkit-text-fill-color: transparent;
-        // background-clip: text;
-        // color: transparent;
-        // display: inline-block;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -79,15 +74,12 @@ const Photo = styled.img`
     height: 350px;
     object-fit: cover;
     border-radius: 50%;
-    //width: 335px;
-    //height: 335px;
     padding: 10px;
 `
 
 const PhotoWrapper = styled.div`
     width: 350px;
     height: 350px;
-    //border: 9px solid ;
     border-radius: 50%;
     background: ${theme.colors.linearGradientImg};
     display: flex;
