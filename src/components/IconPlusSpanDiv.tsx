@@ -7,6 +7,7 @@ type IconPlusSpanDivPropsType = {
     width?: string
     height?: string
     viewBox?: string
+    gap?: string
 }
 
 
@@ -23,6 +24,7 @@ export const IconPlusSpanDiv = (props: IconPlusSpanDivPropsType) => {
 const StyledIconPlusSpanDiv = styled.div`
     display: flex;
     text-align: center;
+    gap: 10px;
 `
 
 const SpanForIconPlusSpanDiv = styled.span`
