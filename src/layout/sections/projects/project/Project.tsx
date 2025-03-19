@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import {IconPlusSpanDiv} from "../../../../components/IconPlusSpanDiv.tsx";
-import {Menu} from "../../../../components/menu/Menu.tsx";
 import {itemsStack} from "../Projects.tsx";
 import {theme} from "../../../../styles/Theme.ts";
 import {Button} from "../../../../components/Button.tsx";
+import {TabMenu} from "../tabMenu/TabMenu.tsx";
 
 
 type ProjectPropsType = {
@@ -13,6 +13,12 @@ type ProjectPropsType = {
     alt?: string
 }
 
+type ProjectLinkWrapperPropsType = {
+    gap?: string
+    marginBottom?: string
+}
+
+
 export const Project = (props: ProjectPropsType) => {
     return (
         <StyledProject>
@@ -20,16 +26,18 @@ export const Project = (props: ProjectPropsType) => {
                 <Image src={props.src} alt={props.alt}/>
                 <Button>View Project</Button>
             </ImageWrapper>
-            <ArticleDiv>
+            <ArticleWrapper>
                 <Title>{props.title}</Title>
                 <Text>{props.text}</Text>
-                <StackSpan>Tech stack : </StackSpan>
-                <Menu menuItems={itemsStack}/>
-                <StyledProjectLinkWrapper>
+                <StyledProjectLinkWrapper gap={'20px'} marginBottom={'-30px'}>
+                    <StackSpan>Tech stack : </StackSpan>
+                    <TabMenu menuItems={itemsStack}/>
+                </StyledProjectLinkWrapper>
+                <StyledProjectLinkWrapper gap={'50px'}>
                     <IconPlusSpanDiv iconId={'chain-projects'} spanText={'Live Preview'} width={'20px'} height={'20px'} viewBox={'-5 -5 30 30'}/>
                     <IconPlusSpanDiv iconId={'github-projects'} spanText={'View Code'} width={'20px'} height={'20px'} viewBox={'-5 -5 30 30'}/>
                 </StyledProjectLinkWrapper>
-            </ArticleDiv>
+            </ArticleWrapper>
         </StyledProject>
     );
 };
@@ -83,7 +91,7 @@ const ImageWrapper = styled.div`
     }
 `
 
-const ArticleDiv = styled.div`
+const ArticleWrapper = styled.div`
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -105,9 +113,11 @@ const Text = styled.p`
 const StackSpan = styled.span`
     font-weight: 400;
     font-size: 16px;
+    white-space: nowrap;
 `
 
-const StyledProjectLinkWrapper = styled.div`
+const StyledProjectLinkWrapper = styled.div<ProjectLinkWrapperPropsType>`
     display: flex;
-    gap: 50px;
+    gap: ${props => props.gap || undefined};
+    margin-bottom: ${props => props.marginBottom || undefined};
 `
