@@ -32,4 +32,29 @@ const AboutSmall = styled.small`
     font-weight: 600;
     font-size: 9px;
     color: ${theme.colors.accentFont2};
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid ${theme.colors.accentFont2};
+    border-radius: 100px;
+
+    // position: relative;
+    // z-index: 0;
+    //
+    // &::before {
+    //     content: '';
+    //     display: inline-block;
+    //     min-width: 120%;
+    //     //width: 84px;
+    //     height: 24px;
+    //     border-radius: 100px;
+    //     border: 1px solid ${theme.colors.accentFont2};
+    //
+    //     position: absolute;
+    //     //top: -3px;
+    //     bottom: 0;
+    //     z-index: -1;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    // }
 `
