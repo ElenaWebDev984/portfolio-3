@@ -41,7 +41,6 @@ const StyledAbout = styled.section`
 
 const EmptyWrapper = styled.div`
     max-width: 710px;
-    outline: 1px solid blue;
 `
 
 const AboutSectionTitle = styled.h2`
@@ -54,6 +53,7 @@ const AboutSectionText = styled.p`
     font-weight: 400;
     font-size: 18px;
     color: ${theme.colors.linkNavFont};
+    padding-bottom: 40px;
 `
 
 
