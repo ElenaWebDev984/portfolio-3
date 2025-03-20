@@ -24,7 +24,7 @@ export const Project = (props: ProjectPropsType) => {
         <StyledProject>
             <ImageWrapper>
                 <Image src={props.src} alt={props.alt}/>
-                <Button>View Project</Button>
+                <Button width={'150px'} height={'40px'} padding={'7px 15px'}>View Project</Button>
             </ImageWrapper>
             <ArticleWrapper>
                 <Title>{props.title}</Title>
