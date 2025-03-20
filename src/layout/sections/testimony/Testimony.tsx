@@ -11,7 +11,7 @@ export const Testimony = () => {
             <SectionTitle>Testimony</SectionTitle>
            <FlexWrapper direction="column" alignItems="center">
                <Icon iconId={'testimony'} viewBox={'-12 -12 50 50'}/>
-               <Slider/>
+               <Slider textP={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.'} textSpan={'@ivan ivanow'}/>
            </FlexWrapper>
         </StyledTestimony>
     );
