@@ -6,10 +6,10 @@ import {theme} from "../../../styles/Theme.ts";
 export const HeaderMenu = (props: {menuItems: Array<string>}) => {
     return (
         <StyledHeaderMenu>
-            <ul>
+            <MenuUl>
                 {props.menuItems.map((item, index) => {
-                    return  <ListItem key={index}>
-                        <Link href="">
+                    return  <MenuListItem key={index}>
+                        <MenuLink href="">
                             {item}
                             <Mask>
                                 <span>{item}</span>
@@ -17,20 +17,21 @@ export const HeaderMenu = (props: {menuItems: Array<string>}) => {
                             <Mask>
                                 <span>{item}</span>
                             </Mask>
-                        </Link>
-                    </ListItem>
+                        </MenuLink>
+                    </MenuListItem>
                 })}
-            </ul>
+            </MenuUl>
         </StyledHeaderMenu>
     );
 };
 
 const StyledHeaderMenu = styled.nav`
+    
+`
 
-    ul {
-        display: flex;
-        gap: 40px;
-    }
+const MenuUl = styled.ul`
+    display: flex;
+    gap: 40px;
 `
 
 const Mask = styled.span`
@@ -53,7 +54,7 @@ const Mask = styled.span`
     }
 `
 
-const ListItem = styled.li`
+const MenuListItem = styled.li`
     position: relative;
     
     &::before {
@@ -87,7 +88,7 @@ const ListItem = styled.li`
     }
 `
 
-const Link = styled.a`
+const MenuLink = styled.a`
     font-family: 'DM Sans', sans-serif;
     font-weight: 500;
     font-size: 20px;
