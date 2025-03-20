@@ -18,7 +18,7 @@ export const Contact = () => {
                         <Field placeholder={'Email'} type='email'/>
                         <Field placeholder={'Subject'}/>
                         <Field as={'textarea'} placeholder={'Message'}/>
-                        <Button type={'submit'}>Send Message</Button>
+                        <Button type={'submit'} width={'100%'} padding={'7px 15px'} marginBottom={'50px'}>Send Message</Button>
                     </StyledForm>
                     <MenuContact/>
                 </FlexWrapper>
@@ -28,20 +28,40 @@ export const Contact = () => {
 };
 
 const StyledContact = styled.section`
-    min-height: 50vh;
 
 `
 
 const StyledForm = styled.form`
     width: 100%;
-    max-width: 430px;
+    max-width: 540px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
+
+    textarea {
+        resize: none;
+        height: 155px;
+    }
 `
 
 const Field = styled.input`
     background-color: ${theme.colors.projectBgc};
-    //border-radius: 5px;
+    border: 1px solid ${theme.colors.borderForm};
+    color: ${theme.colors.h2h3Font};
+    border-radius: 5px;
+    line-height: 1.2;
+    width: 100%;
+    padding: 7px 15px;
+    letter-spacing: 0.05em;
+    font-family: Poppins, sans-serif; 
+    
+    &::placeholder {
+        color: ${theme.colors.linkNavFont};
+    }
+    
+    &:focus-visible {
+        outline: 1px solid ${theme.colors.accentFont2};
+    }
 `
 
