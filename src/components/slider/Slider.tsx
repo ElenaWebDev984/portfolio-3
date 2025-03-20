@@ -1,19 +1,24 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../FlexWrapper.tsx";
+import {theme} from "../../styles/Theme.ts";
 
+type SliderPropsType = {
+    textP?: string
+    textSpan?: string
+}
 
-export const Slider = () => {
+export const Slider = (props: SliderPropsType) => {
     return (
         <StyledSlider>
             <FlexWrapper>
                 <Slide>
-                    <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</Text>
-                    <Name>@ivan ivanow</Name>
+                    <Text>{props.textP}</Text>
+                    <Name>{props.textSpan}</Name>
                 </Slide>
             </FlexWrapper>
             <Pagination>
                 <span></span>
-                <span></span>
+                <span className={'active'}></span>
                 <span></span>
             </Pagination>
         </StyledSlider>
@@ -22,7 +27,6 @@ export const Slider = () => {
 
 const StyledSlider = styled.div`
     max-width: 500px;
-    border: 1px solid violet;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,16 +41,30 @@ const Text = styled.p`
 `
 
 const Name = styled.span`
-
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 22px 0 42px;
+    display: inline-block;
 `
 
 const Pagination = styled.div`
     
     span {
         display: inline-block;
-        width: 10px;
-        height: 10px;
-        margin: 5px;
-        background-color: crimson;
+        background-color: ${theme.colors.linkNavFont};
+        width: 7px;
+        height: 7px;
+        
+        & + span {
+            margin-left: 5px;
+        }
+        
+        &.active {
+            background-color: ${theme.colors.accentFont2};
+            width: 20px;
+        }
     }
 `
