@@ -15,7 +15,7 @@ export const Main = () => {
                         <Name>I'm <span>Elena</span></Name>
                         <MainTitle>a <span>web developer</span></MainTitle>
                         <MainText>I craft responsive websites where technologies meet creativity</MainText>
-                        <Button type={'submit'}>Contact me!!!</Button>
+                        <Button type={'submit'} width={'150px'} height={'40px'}>Contact me!!!</Button>
                     </div>
                     <PhotoWrapper>
                         <Photo src={photo} alt="foto"/>
