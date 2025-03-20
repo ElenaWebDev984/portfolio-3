@@ -7,6 +7,7 @@ export const theme = {
         projectLinkFont: '#FFFFFF',
         projectBgc: '#363636', // Project, Form
         borderFooter: '#42446E',
+        borderForm: '#4A4A4A',
 
         accentImg: '#E70FAA',
         accentImg2: '#00C0FD',
@@ -14,7 +15,7 @@ export const theme = {
         accentFont2: '#E70FAA',
         // TODO delete accent colors after to do gradient
         linearGradientImg: 'linear-gradient(180deg, #E70FAA 0%, #00C0FD 100%)', // PHOTO
-        linearGradientFont: 'linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%)', // MAIN, SLOGAN
+        linearGradientFont: 'linear-gradient(90deg, #13B0F5 2.6%, #E70FAA 100%)', // MAIN, SLOGAN
         linearGradientPseudoFooter: 'linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 97.86%)',
         linearGradientLogo: 'linear-gradient(62.8deg, #00C0FD -167.81%, #E70FAA 267.18%)',
         // TODO add GradientColors
