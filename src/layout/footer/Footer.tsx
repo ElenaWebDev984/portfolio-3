@@ -11,28 +11,30 @@ import {theme} from "../../styles/Theme.ts";
 export const Footer = () => {
     return (
         <StyledFooter>
-           <Container>
-               <FlexWrapper justifyContent="space-between">
-                   <Logo/>
-                   <MenuContact/>
-               </FlexWrapper>
-               <DivPseudoWrapper/>
-               <FlexWrapper justifyContent="space-between">
-                   <HeaderMenu menuItems={items}/>
-                   <StyledFooterText>© 2025 Designed and built by <span>Elena</span> with <span>Love</span> & <span>Coffee</span></StyledFooterText>
-               </FlexWrapper>
-           </Container>
+            <Container>
+                <DivPseudoWrapper>
+                    <Logo/>
+                    <MenuContact/>
+                </DivPseudoWrapper>
+                <FlexWrapper justifyContent="space-between">
+                    <HeaderMenu menuItems={items}/>
+                    <StyledFooterText>© 2025 Designed and built
+                        by <span>Elena</span> with <span>Love</span> & <span>Coffee</span></StyledFooterText>
+                </FlexWrapper>
+            </Container>
         </StyledFooter>
     );
 };
 
 const StyledFooter = styled.footer`
-    min-height: 20vh;
+    margin: 120px 0 60px;
 `
 
 const StyledFooterText = styled.p`
     font-weight: 400;
     font-size: 18px;
+    line-height: 1.4;
+    color: ${theme.colors.linkNavFont};
 
     span {
         background: ${theme.colors.linearGradientFont};
@@ -45,13 +47,20 @@ const StyledFooterText = styled.p`
 `
 
 const DivPseudoWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 75px;
+
     &::before {
         content: '';
         display: inline-block;
+        position: absolute;
         width: 100%;
         height: 2px;
         background-color: ${theme.colors.borderFooter};
         opacity: 30%;
-        margin: 30px 0;
+        top: 85px;
     }
 `
