@@ -47,6 +47,7 @@ export const MenuContact = () => {
 
 const StyledMenuContact = styled.ul`
     display: flex;
+    align-items: center;
     gap: 20px;
 `
 
