@@ -4,22 +4,25 @@ import {Button} from "../../../components/Button.tsx";
 import {theme} from "../../../styles/Theme.ts";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {MenuContact} from "../../../components/menu/MenuContact.tsx";
+import { Container } from "../../../components/Container.tsx";
 
 
 export const Contact = () => {
     return (
         <StyledContact>
-            <SectionTitle>Get in touch</SectionTitle>
-            <FlexWrapper direction={"column"} alignItems={'center'}>
-                <StyledForm>
-                    <Field placeholder={'Name'}/>
-                    <Field placeholder={'Email'} type='email'/>
-                    <Field placeholder={'Subject'}/>
-                    <Field as={'textarea'} placeholder={'Message'}/>
-                    <Button type={'submit'}>Send Message</Button>
-                </StyledForm>
-                <MenuContact/>
-            </FlexWrapper>
+            <Container>
+                <SectionTitle>Get in touch</SectionTitle>
+                <FlexWrapper direction={"column"} alignItems={'center'}>
+                    <StyledForm>
+                        <Field placeholder={'Name'}/>
+                        <Field placeholder={'Email'} type='email'/>
+                        <Field placeholder={'Subject'}/>
+                        <Field as={'textarea'} placeholder={'Message'}/>
+                        <Button type={'submit'}>Send Message</Button>
+                    </StyledForm>
+                    <MenuContact/>
+                </FlexWrapper>
+            </Container>
         </StyledContact>
     );
 };
