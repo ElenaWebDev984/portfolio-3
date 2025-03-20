@@ -42,4 +42,4 @@ const StyledProjects = styled.section`
     min-height: 100vh;
 `
 
-// test
+// TODO delete branch after commit
