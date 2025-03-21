@@ -14,11 +14,14 @@ export const Button = styled.button<ButtonPropsType>`
     height: ${props => props.height || undefined};
     padding: ${props => props.padding || undefined};
     margin-bottom: ${props => props.marginBottom || undefined};
+    background-image: ${theme.colors.linearGradientFont};
+    color: ${theme.colors.h2h3Font};
     font-weight: 600;
     font-size: 20px;
     cursor: pointer;
-    background-image: ${theme.colors.linearGradientFont};
-    color: ${theme.colors.h2h3Font};
     border-radius: 5px;
     white-space: nowrap;
 `
+
+// width={'150px'} height={'40px'}
+// padding={'8px 16px'}
