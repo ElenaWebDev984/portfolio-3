@@ -16,18 +16,18 @@ export const About = () => {
 
                    <AboutSectionTitle>Work Experience</AboutSectionTitle>
                    <AboutLocationWrapper text={'Junior Web Developer'} smallText={'Full Time'}
-                                         spanTextBuilding={'Dr. Rajkumar’s Learning App'} spanTextLocation={'Bengaluru'}
+                                         spanTextOffice={'Dr. Rajkumar’s Learning App'} spanTextLocation={'Bengaluru'}
                                          spanTextCalendar={'Sep 2021 - Dec 2021'}/>
                    <AboutLocationWrapper text={'Web Development Intern'} smallText={'Internship'}
-                                         spanTextBuilding={'IonPixelz Web Solutions'} spanTextLocation={'Bengaluru'}
+                                         spanTextOffice={'IonPixelz Web Solutions'} spanTextLocation={'Bengaluru'}
                                          spanTextCalendar={'Sep 2021 - Dec 2021'}/>
                    <AboutLocationWrapper text={'SEO / SEM Specialist'} smallText={'Internship'}
-                                         spanTextBuilding={'HAAPS'} spanTextLocation={'Bengaluru'}
+                                         spanTextOffice={'HAAPS'} spanTextLocation={'Bengaluru'}
                                          spanTextCalendar={'Sep 2021 - Dec 2021'}/>
 
                    <AboutSectionTitle>Education</AboutSectionTitle>
                    <AboutLocationWrapper text={'Bachelor in Electronics & Communication'} smallText={'Full Time'}
-                                         spanTextBuilding={'Bachelor in Electronics & Communication'}
+                                         spanTextOffice={'Bachelor in Electronics & Communication'}
                                          spanTextLocation={'Bengaluru'} spanTextCalendar={'Aug 2015 - Dec 2020'}/>
                </EmptyWrapper>
             </Container>

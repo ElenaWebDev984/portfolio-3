@@ -6,7 +6,7 @@ import {theme} from "../../../styles/Theme.ts";
 type AboutLocationWrapperPropsType = {
     text: string
     smallText: string
-    spanTextBuilding: string
+    spanTextOffice: string
     spanTextLocation: string
     spanTextCalendar: string
 }
@@ -15,7 +15,7 @@ export const AboutLocationWrapper = (props: AboutLocationWrapperPropsType) => {
     return (
         <StyledAboutLocationWrapper>
             <TextPlusSmallWrapper text={props.text} smallText={props.smallText} />
-            <IconPlusSpanDivWrapper spanTextBuilding={props.spanTextBuilding} spanTextLocation={props.spanTextLocation} spanTextCalendar={props.spanTextCalendar}/>
+            <IconPlusSpanDivWrapper spanTextBuilding={props.spanTextOffice} spanTextLocation={props.spanTextLocation} spanTextCalendar={props.spanTextCalendar}/>
         </StyledAboutLocationWrapper>
     );
 };

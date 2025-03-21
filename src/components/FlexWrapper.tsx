@@ -6,7 +6,6 @@ type FlexWrapperPropsType = {
     alignItems?: string
     wrap?: string
     gap?: string
-    alignContent?: string
 }
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
