@@ -8,6 +8,7 @@ export const theme = {
         projectBgc: '#363636', // Project, Form
         borderFooter: '#42446E',
         borderForm: '#4A4A4A',
+        iconProjectColor: '#FCFCFC',
 
         accentImg: '#E70FAA',
         accentImg2: '#00C0FD',
