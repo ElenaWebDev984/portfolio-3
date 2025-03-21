@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import {IconPlusSpanDiv} from "../../../../components/IconPlusSpanDiv.tsx";
 import {itemsStack} from "../Projects.tsx";
 import {theme} from "../../../../styles/Theme.ts";
 import {Button} from "../../../../components/Button.tsx";
 import {TabMenu} from "../tabMenu/TabMenu.tsx";
+import {ProjectLinkDiv} from "./ProjectLinkDiv.tsx";
 
 
 type ProjectPropsType = {
@@ -34,8 +34,8 @@ export const Project = (props: ProjectPropsType) => {
                     <TabMenu menuItems={itemsStack}/>
                 </StyledProjectLinkWrapper>
                 <StyledProjectLinkWrapper gap={'50px'}>
-                    <IconPlusSpanDiv iconId={'chain-projects'} spanText={'Live Preview'} width={'20px'} height={'20px'} viewBox={'-5 -5 30 30'}/>
-                    <IconPlusSpanDiv iconId={'github-projects'} spanText={'View Code'} width={'20px'} height={'20px'} viewBox={'-5 -5 30 30'}/>
+                    <ProjectLinkDiv iconId={'chain-projects'} href={'#'} textLink={'Live Preview'} width={'20px'} height={'20px'} viewBox={'-5 -5 30 30'}/>
+                    <ProjectLinkDiv iconId={'github-projects'} href={'#'} textLink={'View Code'} width={'20px'} height={'20px'} viewBox={'-5 -5 30 30'}/>
                 </StyledProjectLinkWrapper>
             </ArticleWrapper>
         </StyledProject>
