@@ -10,9 +10,9 @@ type IconPlusSpanDivWrapperPropsType = {
 export const IconPlusSpanDivWrapper = (props: IconPlusSpanDivWrapperPropsType) => {
     return (
         <StyledIconPlusSpanDivWrapper>
-            <IconPlusSpanDiv iconId={'office-building'} spanText={props.spanTextBuilding} />
-            <IconPlusSpanDiv iconId={'location'} spanText={props.spanTextLocation} />
-            <IconPlusSpanDiv iconId={'calendar'} spanText={props.spanTextCalendar} />
+            <IconPlusSpanDiv iconId={'office-building'} spanText={props.spanTextBuilding} width={'20px'} height={'20px'} viewBox={'-4 -4 20 20'} gap={'10px'}/>
+            <IconPlusSpanDiv iconId={'location'} spanText={props.spanTextLocation} width={'20px'} height={'20px'} viewBox={'-4 -4 20 20'} gap={'10px'}/>
+            <IconPlusSpanDiv iconId={'calendar'} spanText={props.spanTextCalendar} width={'20px'} height={'20px'} viewBox={'-4 -4 20 20'} gap={'10px'}/>
         </StyledIconPlusSpanDivWrapper>
     );
 };
