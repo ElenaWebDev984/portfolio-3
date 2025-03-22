@@ -1,21 +1,14 @@
 import styled from "styled-components";
-import {itemsStack} from "../Projects.tsx";
 import {theme} from "../../../../styles/Theme.ts";
 import {Button} from "../../../../components/Button.tsx";
-import {TabMenu} from "../tabMenu/TabMenu.tsx";
-import {ProjectLinkDiv} from "./ProjectLinkDiv.tsx";
+import {ProjectLinks} from "./ProjectLinks.tsx";
 
 
 type ProjectPropsType = {
     title: string
     text: string
-    src:  string
+    src: string
     alt?: string
-}
-
-type ProjectLinkWrapperPropsType = {
-    gap?: string
-    marginBottom?: string
 }
 
 
@@ -26,18 +19,12 @@ export const Project = (props: ProjectPropsType) => {
                 <Image src={props.src} alt={props.alt}/>
                 <Button width={'150px'} height={'40px'} padding={'7px 15px'}>View Project</Button>
             </ImageWrapper>
-            <ArticleWrapper>
+            <Content>
                 <Title>{props.title}</Title>
                 <Text>{props.text}</Text>
-                <StyledProjectLinkWrapper gap={'20px'} marginBottom={'-30px'}>
-                    <StackSpan>Tech stack : </StackSpan>
-                    <TabMenu menuItems={itemsStack}/>
-                </StyledProjectLinkWrapper>
-                <StyledProjectLinkWrapper gap={'50px'}>
-                    <ProjectLinkDiv iconId={'chain-projects'} href={'#'} textLink={'Live Preview'} width={'20px'} height={'20px'} viewBox={'-5 -5 30 30'}/>
-                    <ProjectLinkDiv iconId={'github-projects'} href={'#'} textLink={'View Code'} width={'20px'} height={'20px'} viewBox={'-5 -5 30 30'}/>
-                </StyledProjectLinkWrapper>
-            </ArticleWrapper>
+                <TechStacks><span>Tech stack : </span> HTML , JavaScript, SASS, React</TechStacks>
+                <ProjectLinks/>
+            </Content>
         </StyledProject>
     );
 };
@@ -47,14 +34,6 @@ const StyledProject = styled.article`
     max-width: 375px;
     width: 100%;
     border-radius: 20px;
-`
-
-const Image = styled.img`
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
 `
 
 const ImageWrapper = styled.div`
@@ -79,19 +58,27 @@ const ImageWrapper = styled.div`
         backdrop-filter: blur(4);
         opacity: 0;
     }
-    
+
     &:hover {
         &::before {
             opacity: 1;
         }
-        
+
         ${Button} {
             opacity: 1;
         }
     }
 `
 
-const ArticleWrapper = styled.div`
+const Image = styled.img`
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+`
+
+const Content = styled.div`
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -110,14 +97,13 @@ const Text = styled.p`
     line-height: 144%;
 `
 
-const StackSpan = styled.span`
-    font-weight: 400;
+const TechStacks = styled.p`
+    font-weight: 300;
     font-size: 16px;
-    white-space: nowrap;
+    
+    span {
+        font-weight: 400;
+        font-size: 14px;
+    }
 `
 
-const StyledProjectLinkWrapper = styled.div<ProjectLinkWrapperPropsType>`
-    display: flex;
-    gap: ${props => props.gap || undefined};
-    margin-bottom: ${props => props.marginBottom || undefined};
-`

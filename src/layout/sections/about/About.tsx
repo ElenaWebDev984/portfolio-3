@@ -8,7 +8,7 @@ export const About = () => {
     return (
         <StyledAbout>
             <Container>
-               <EmptyWrapper>
+               <AboutContent>
                    <AboutSectionTitle>About Me</AboutSectionTitle>
                    <AboutSectionText>The Generator App is an online tool that helps you to export ready-made templates ready to
                        work as your future website. It helps you to combine slides, panels and other components and export it
@@ -29,7 +29,7 @@ export const About = () => {
                    <AboutLocationWrapper text={'Bachelor in Electronics & Communication'} smallText={'Full Time'}
                                          spanTextOffice={'Bachelor in Electronics & Communication'}
                                          spanTextLocation={'Bengaluru'} spanTextCalendar={'Aug 2015 - Dec 2020'}/>
-               </EmptyWrapper>
+               </AboutContent>
             </Container>
         </StyledAbout>
     );
@@ -39,7 +39,7 @@ const StyledAbout = styled.section`
 
 `
 
-const EmptyWrapper = styled.div`
+const AboutContent = styled.div`
     max-width: 710px;
 `
 
