@@ -13,9 +13,9 @@ import {Container} from "../../../components/Container.tsx";
 import {TabMenu} from "./tabMenu/TabMenu.tsx";
 
 
-export const items = ['All', 'HTML', 'JavaScript', 'SASS', 'React',]
+export const tabItems = ['All', 'HTML', 'JavaScript', 'SASS', 'React',]
 
-export const itemsStack = ['HTML', 'SASS', 'React',]
+// export const stackItems = ['HTML', 'JavaScript', 'SASS', 'React',]
 
 
 export const Projects = () => {
@@ -24,7 +24,7 @@ export const Projects = () => {
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <SectionText>Things I’ve built so far</SectionText>
-                <TabMenu menuItems={items}/>
+                <TabMenu menuItems={tabItems}/>
                 <FlexWrapper justifyContent={'space-between'} alignItems={'flex-start'} wrap={'wrap'} gap={'60px 35px'}>
                     <Project title={'Project Tile goes here'} text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} src={projectImg1} alt={'project1'} />
                     <Project title={'Project Tile goes here'} text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} src={projectImg2} alt={'project2'} />
