@@ -3,7 +3,6 @@ import {Icon} from "../../../components/icon/Icon.tsx";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {SectionText} from "../../../components/SectionText.tsx";
 import {Container} from "../../../components/Container.tsx";
-import {GridWrapper} from "../../../components/GridWrapper.tsx";
 
 
 export const Skills = () => {
@@ -12,7 +11,7 @@ export const Skills = () => {
             <Container>
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <SectionText>Technologies I’ve been working with recently</SectionText>
-                <GridWrapper gap={'80px 100px'} justifyContent={'center'} alignItems={'center'}>
+                <GridWrapper>
                     <Icon iconId={'html'} width={'120px'} height={'120px'} viewBox={'0 -4 120 120'}/>
                     <Icon iconId={'css'} width={'120px'} height={'120px'} viewBox={'0 -4 120 120'}/>
                     <Icon iconId={'js'} width={'120px'} height={'120px'} viewBox={'-10 -10 150 150'}/>
@@ -33,5 +32,12 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
 
+`
+
+const GridWrapper = styled.div`
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    row-gap: 80px;
 `
 

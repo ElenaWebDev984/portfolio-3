@@ -3,8 +3,8 @@ import {FlexWrapper} from "../FlexWrapper.tsx";
 import {theme} from "../../styles/Theme.ts";
 
 type SliderPropsType = {
-    textP?: string
-    textSpan?: string
+    text?: string
+    name?: string
 }
 
 export const Slider = (props: SliderPropsType) => {
@@ -12,8 +12,8 @@ export const Slider = (props: SliderPropsType) => {
         <StyledSlider>
             <FlexWrapper>
                 <Slide>
-                    <Text>{props.textP}</Text>
-                    <Name>{props.textSpan}</Name>
+                    <Text>{props.text}</Text>
+                    <Name>{props.name}</Name>
                 </Slide>
             </FlexWrapper>
             <Pagination>
