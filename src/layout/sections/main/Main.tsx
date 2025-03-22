@@ -11,7 +11,7 @@ export const Main = () => {
             <Container>
                 <FlexWrapper justifyContent={'space-between'} alignItems={'center'} gap={'20px'}>
                     <ContentMain>
-                        <SmallText>Hi there! 👋</SmallText>
+                        <Greeting>Hi there! 👋</Greeting>
                         <MainTitle>I'm <span>Elena</span><br/>a <span>web developer</span></MainTitle>
                         <MainText>I craft responsive websites where technologies meet creativity</MainText>
                         <ButtonWrapper>
@@ -54,7 +54,7 @@ const MainTitle = styled.h2`
         white-space: nowrap;
 `
 
-const SmallText = styled.span`
+const Greeting = styled.span`
    
 `
 

@@ -12,14 +12,13 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-                <DivPseudoWrapper>
+                <PseudoWrapper>
                     <Logo/>
                     <MenuContact/>
-                </DivPseudoWrapper>
+                </PseudoWrapper>
                 <FlexWrapper justifyContent="space-between">
                     <HeaderMenu menuItems={items}/>
-                    <StyledFooterText>© 2025 Designed and built
-                        by <span>Elena</span> with <span>Love</span> & <span>Coffee</span></StyledFooterText>
+                    <Copyright>© 2025 Designed and built by <span>Elena</span> with <span>Love</span> & <span>Coffee</span></Copyright>
                 </FlexWrapper>
             </Container>
         </StyledFooter>
@@ -30,7 +29,7 @@ const StyledFooter = styled.footer`
     margin: 120px 0 60px;
 `
 
-const StyledFooterText = styled.p`
+const Copyright = styled.p`
     font-weight: 400;
     font-size: 18px;
     line-height: 1.4;
@@ -46,7 +45,7 @@ const StyledFooterText = styled.p`
     }
 `
 
-const DivPseudoWrapper = styled.div`
+const PseudoWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

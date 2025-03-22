@@ -6,7 +6,7 @@ import {theme} from "../../../styles/Theme.ts";
 export const HeaderMenu = (props: {menuItems: Array<string>}) => {
     return (
         <StyledHeaderMenu>
-            <MenuUl>
+            <MenuList>
                 {props.menuItems.map((item, index) => {
                     return  <MenuListItem key={index}>
                         <MenuLink href="">
@@ -20,7 +20,7 @@ export const HeaderMenu = (props: {menuItems: Array<string>}) => {
                         </MenuLink>
                     </MenuListItem>
                 })}
-            </MenuUl>
+            </MenuList>
         </StyledHeaderMenu>
     );
 };
@@ -29,7 +29,7 @@ const StyledHeaderMenu = styled.nav`
     
 `
 
-const MenuUl = styled.ul`
+const MenuList = styled.ul`
     display: flex;
     gap: 40px;
 `
