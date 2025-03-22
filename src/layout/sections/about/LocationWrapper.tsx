@@ -1,42 +1,42 @@
 import styled from "styled-components";
 import {Icon} from "../../../components/icon/Icon.tsx";
-import {theme} from "../../../styles/Theme.tsx";
-import {font} from "../../../styles/Common.ts";
+import {theme} from "../../../styles/Theme.ts";
 
-type StackDivPropsType = {
+
+
+type LocationWrapperPropsType = {
     iconId: string
-    text: string
     width?: string
     height?: string
     viewBox?: string
+    locationText: string
 }
 
-export const StackDiv = (props: StackDivPropsType) => {
+
+export const LocationWrapper = (props: LocationWrapperPropsType) => {
     return (
-        <StyledStackDiv>
+        <StyledLocationWrapper>
             <Icon iconId={props.iconId} width={props.width} height={props.height} viewBox={props.viewBox} />
-            <AboutIconSpan>{props.text}</AboutIconSpan>
-        </StyledStackDiv>
+            <IconText>{props.locationText}</IconText>
+        </StyledLocationWrapper>
     );
 };
 
 
-const StyledStackDiv = styled.div`
+const StyledLocationWrapper = styled.div`
     display: flex;
     text-align: center;
-    //border: 1px solid orange;
     justify-content: center;
     align-items: center;
     gap: 10px;
 `
 
 
-const AboutIconSpan = styled.span`
-    ${font({weight: 500, Fmax: 12, Fmin: 10})};
-    color: ${theme.colors.fonsPrimary.textAboutLink};
+const IconText = styled.span`
+    color: ${theme.colors.linkNavFont};
     font-weight: 500;
     font-size: 12px;
     line-height: 28px;
     letter-spacing: 1px;
-
+    white-space: nowrap;
 `
