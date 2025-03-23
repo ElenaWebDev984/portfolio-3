@@ -15,7 +15,7 @@ export const BtnGradient = styled.button<BtnGradientPropsType>`
     height: ${props => props.height || undefined};
     padding: ${props => props.padding || undefined};
     margin-bottom: ${props => props.marginBottom || undefined};
-    // background-image: ${theme.colors.linearGradientFont};
+        // background-image: ${theme.colors.linearGradientFont};
     color: ${theme.colors.h2h3Font};
     text-align: center;
     font-weight: 600;
@@ -30,7 +30,7 @@ export const BtnGradient = styled.button<BtnGradientPropsType>`
     align-items: center;
 
     background-color: ${theme.colors.primaryBgc};
-    
+
     &::after {
         content: '';
         position: absolute;
@@ -40,9 +40,10 @@ export const BtnGradient = styled.button<BtnGradientPropsType>`
         background-image: ${theme.colors.linearGradientFont};
         z-index: -1;
     }
-    
+
     &:hover {
         z-index: 0;
         box-shadow: 40px 0 100px ${theme.colors.accentFont}, -40px 0 100px ${theme.colors.accentFont2};
+        transform: translateY(-4px);
     }
 `
