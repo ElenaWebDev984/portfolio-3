@@ -27,6 +27,9 @@ export const HeaderMenu = (props: {menuItems: Array<string>}) => {
 
 const StyledHeaderMenu = styled.nav`
     
+    @media ${theme.media.desktop} {
+        display: none;
+    }
 `
 
 const MenuList = styled.ul`
