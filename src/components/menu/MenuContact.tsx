@@ -62,7 +62,3 @@ const MenuContactLink = styled.a`
 `
 
 
-// const StyledMenuContact = styled.ul<StyledMenuContactPropsType>`
-//     display: flex;
-//     gap: ${props => props.gap || undefined};
-// `
