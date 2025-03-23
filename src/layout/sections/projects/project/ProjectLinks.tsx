@@ -7,7 +7,7 @@ export const ProjectLinks = () => {
     return (
         <StyledProjectLinks>
             <ProjectLink href='#'>
-                <Icon iconId={'chain-projects'} width={'20px'}height={'20px'} viewBox={'-5 -5 30 30'}/>
+                <Icon iconId={'chain-projects'} width={'20px'} height={'20px'} viewBox={'-5 -5 30 30'}/>
                 Live Preview
             </ProjectLink>
             <ProjectLink href='#'>
@@ -23,6 +23,7 @@ const StyledProjectLinks = styled.div`
     display: flex;
     margin-bottom: 25px;
     gap: 50px;
+    //flex-wrap: wrap;
 `
 
 
