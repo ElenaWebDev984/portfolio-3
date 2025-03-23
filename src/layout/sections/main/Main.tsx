@@ -103,9 +103,9 @@ const AbstractSvg = styled.img`
     top: 50%; 
     left: 50%; 
     pointer-events: none;
-    z-index: 1;
+    z-index: -1;
    transform: rotate(360deg) translate(-50%, -50%);
-    opacity: 1;
+    opacity: 0.8;
     border-width: 1px;
     filter: brightness(0) invert(1) sepia(1) hue-rotate(180deg);
 
