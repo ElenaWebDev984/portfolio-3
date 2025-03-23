@@ -5,6 +5,7 @@ import {Button} from "../../../components/Button.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {theme} from "../../../styles/Theme.ts";
 import {BtnGradient} from "../../../components/BtnGradient.tsx";
+import abstract from '../../../assets/images/AbstractMain.svg'
 
 export const Main = () => {
     return (
@@ -22,6 +23,7 @@ export const Main = () => {
                     </ContentMain>
                     <PhotoWrapper>
                         <Photo src={photo} alt="web developer portfolio"/>
+                        <AbstractSvg src={abstract} alt="frontend developer"/>
                     </PhotoWrapper>
                 </FlexWrapper>
             </Container>
@@ -39,7 +41,7 @@ const StyledMain = styled.section`
 `
 
 const ContentMain = styled.div`
-
+    max-width: 600px;
 `
 
 const MainTitle = styled.h2`
@@ -78,6 +80,8 @@ const Photo = styled.img`
     border-radius: 50%;
     padding: 10px;
     //object-position: top;
+    
+    position: absolute;
 `
 
 const PhotoWrapper = styled.div`
@@ -88,5 +92,25 @@ const PhotoWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 200px;
+
+    position: relative;
+`
+
+const AbstractSvg = styled.img`
+    width: 630px;
+    height: 630px;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    pointer-events: none;
+    z-index: 1;
+   transform: rotate(360deg) translate(-50%, -50%);
+    opacity: 1;
+    border-width: 1px;
+    filter: brightness(0) invert(1) sepia(1) hue-rotate(180deg);
+
+    //brightness(0) делает изображение полностью чёрным
+    //invert(1) превращает чёрный цвет в белый
+    //sepia(1) (эффект сепии), который превращает белый в коричневый
+    //hue-rotate(200deg) поворачивает цветовой круг на 200 градусов, что даёт сине-фиолетовый оттенок
 `
