@@ -25,7 +25,26 @@ export const About = () => {
 };
 
 const StyledAbout = styled.section`
-
+    //position: relative;
+    //
+    //&::after {
+    //    content: '';
+    //    width: 830px;
+    //    height: 830px;
+    //    top: 20%;
+    //    left: 70%;
+    //    transform: rotate(20deg);
+    //    opacity: 0.5;
+    //
+    //
+    //    background-image: url("../../../assets/images/pseudoAboutGradient.svg");
+    //    background-size: cover;
+    //    display: inline-block;
+    //    position: absolute;
+    //
+    //    outline: 5px solid red;
+    //    filter: brightness(0) invert(1) sepia(1) hue-rotate(180deg);
+    //}
 `
 
 const AboutContent = styled.div`
