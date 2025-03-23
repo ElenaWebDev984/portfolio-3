@@ -24,7 +24,6 @@ export const Button = styled.button<ButtonPropsType>`
     cursor: pointer;
     border-radius: 5px;
     white-space: nowrap;
-    border: none;
 
     &:hover {
         box-shadow: 40px 0 100px ${theme.colors.accentFont}, -40px 0 100px ${theme.colors.accentFont2};

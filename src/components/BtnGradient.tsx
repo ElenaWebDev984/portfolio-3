@@ -23,7 +23,6 @@ export const BtnGradient = styled.button<BtnGradientPropsType>`
     cursor: pointer;
     border-radius: 5px;
     white-space: nowrap;
-    border: none;
     position: relative;
     display: flex;
     justify-content: center;
