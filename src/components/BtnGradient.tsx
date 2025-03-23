@@ -1,8 +1,7 @@
 import {theme} from "../styles/Theme.ts";
-import {BtnAnimation, BtnAnimationOut} from "../styles/animations/Animations.tsx";
 import styled from "styled-components";
 
-type ButtonPropsType = {
+type BtnGradientPropsType = {
     width?: string
     height?: string
     padding?: string
@@ -11,12 +10,12 @@ type ButtonPropsType = {
 }
 
 
-export const Button = styled.button<ButtonPropsType>`
+export const BtnGradient = styled.button<BtnGradientPropsType>`
     width: ${props => props.width || undefined};
     height: ${props => props.height || undefined};
     padding: ${props => props.padding || undefined};
     margin-bottom: ${props => props.marginBottom || undefined};
-    background-image: ${theme.colors.linearGradientFont};
+        // background-image: ${theme.colors.linearGradientFont};
     color: ${theme.colors.h2h3Font};
     text-align: center;
     font-weight: 600;
@@ -25,16 +24,26 @@ export const Button = styled.button<ButtonPropsType>`
     border-radius: 5px;
     white-space: nowrap;
     border: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    &:hover {
-        box-shadow: 40px 0 100px ${theme.colors.accentFont}, -40px 0 100px ${theme.colors.accentFont2};
-        animation: ${BtnAnimation} 2s ease-in-out;
+    background-color: ${theme.colors.primaryBgc};
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 107%;
+        width: 102%;
+        border-radius: 5px;
+        background-image: ${theme.colors.linearGradientFont};
+        z-index: -1;
     }
 
-    &:not(:hover) {
-        animation: ${BtnAnimationOut} 2s ease-in-out;
-    } 
+    &:hover {
+        z-index: 0;
+        box-shadow: 40px 0 100px ${theme.colors.accentFont}, -40px 0 100px ${theme.colors.accentFont2};
+        transform: translateY(-4px);
+    }
 `
-
-// width={'150px'} height={'40px'}
-// padding={'8px 16px'}

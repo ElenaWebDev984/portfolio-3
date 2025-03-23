@@ -11,7 +11,7 @@ export const ProjectLinks = () => {
                 Live Preview
             </ProjectLink>
             <ProjectLink href='#'>
-                <Icon iconId={'github-projects'} width={'20px'} height={'20px'} viewBox={'-5 -5 3030'}/>
+                <Icon iconId={'github-projects'} width={'20px'} height={'20px'} viewBox={'-5 -5 30 30'}/>
                View Code
             </ProjectLink>
         </StyledProjectLinks>

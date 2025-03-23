@@ -18,7 +18,7 @@ export const Contact = () => {
                         <Field placeholder={'Email'} type='email'/>
                         <Field placeholder={'Subject'}/>
                         <Field as={'textarea'} placeholder={'Message'}/>
-                        <Button type={'submit'} width={'100%'} padding={'7px 15px'} marginBottom={'50px'}>Send Message</Button>
+                        <Button type={'submit'} width={'100%'} padding={'7px 15px'} marginBottom={'50px'} btnType={'primary'}>Send Message</Button>
                     </StyledForm>
                     <MenuContact/>
                 </FlexWrapper>

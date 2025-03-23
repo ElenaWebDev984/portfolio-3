@@ -4,6 +4,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Button} from "../../../components/Button.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {theme} from "../../../styles/Theme.ts";
+import {BtnGradient} from "../../../components/BtnGradient.tsx";
 
 export const Main = () => {
     return (
@@ -15,8 +16,8 @@ export const Main = () => {
                         <MainTitle>I'm <span>Elena</span><br/>a <span>web developer</span></MainTitle>
                         <MainText>I craft responsive websites where technologies meet creativity</MainText>
                         <ButtonWrapper>
-                            <Button as='a' href={'#'} padding={'8px 16px'} width={'150px'} height={'40px'}>Contact me!!!</Button>
-                            <Button as='a'  href={'#'} padding={'8px 16px'}  width={'150px'} height={'40px'}>Download CV</Button>
+                            <Button as='a' href={'#'} padding={'8px 16px'} width={'150px'} height={'40px'} btnType={'primary'}>Contact me!!!</Button>
+                            <BtnGradient as='a'  href={'#'} padding={'8px 16px'}  width={'150px'} height={'40px'}>Download CV</BtnGradient>
                         </ButtonWrapper>
                     </ContentMain>
                     <PhotoWrapper>
