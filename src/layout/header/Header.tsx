@@ -8,13 +8,6 @@ import {HeaderMenu} from "./headerMenu/HeaderMenu.tsx";
 
 export const items = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact',]
 
-// export const icons = [
-//     { iconId: 'github-contacts' },
-//     { iconId: 'linkedin' },
-//     { iconId: 'telegram' },
-// ]
-
-
 export const Header = () => {
     return (
         <StyledHeader>
@@ -23,7 +16,6 @@ export const Header = () => {
                 <FlexWrapper justifyContent="space-between" alignItems={'center'}>
                     <Logo/>
                     <HeaderMenu menuItems={items}/>
-                    {/*<MenuContact menuIcons={icons}/>*/}
                     <MenuContact />
                 </FlexWrapper>
             </Container>
@@ -46,4 +38,3 @@ const H1 = styled.h1`
     display: none;
 `
 
-// TODO in h1 to do for SEO (web developer, react developer, frontend developer, 2 years...)
