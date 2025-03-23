@@ -17,7 +17,7 @@ export const About = () => {
                     <AboutGridWrapper positionText={'Web Development Intern'} timeText={'Internship'} officeText={'IonPixelz Web Solutions'} locationText={'Bengaluru'} calendarText={'Sep 2021 - Dec 2021'} />
                     <AboutGridWrapper positionText={'SEO / SEM Specialist'} timeText={'Internship'} officeText={'HAAPS'} locationText={'Bengaluru'} calendarText={'Sep 2021 - Dec 2021'} />
                     <AboutSectionTitle>Education</AboutSectionTitle>
-                    <AboutGridWrapper positionText={'Bachelor in Electronics & Communication'} officeText={'HAAPS'} timeText={'Full Time'} locationText={'Bengaluru'} calendarText={'Aug 2015 - Dec 2020'}/>
+                    <AboutGridWrapper positionText={'Bachelor in Electronics & Communication'} officeText={'Bangalore Instutute of Technology'} timeText={'Full Time'} locationText={'Bengaluru'} calendarText={'Aug 2015 - Dec 2020'}/>
                 </AboutContent>
             </Container>
         </StyledAbout>
