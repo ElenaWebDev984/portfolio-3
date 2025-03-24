@@ -1,5 +1,7 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme.ts";
+import {MobileMenuContact} from "./MobileMenuContact.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 
 
 export const MobileMenu = (props: { menuItems: Array<string> }) => {
@@ -10,21 +12,24 @@ export const MobileMenu = (props: { menuItems: Array<string> }) => {
             </BurgerButton>
 
             <MobileMenuPopup isOpen={true}>
-                <MenuList>
-                    {props.menuItems.map((item, index) => {
-                        return <MenuListItem key={index}>
-                            <MenuLink href="">
-                                {item}
-                                <Mask>
-                                    <span>{item}</span>
-                                </Mask>
-                                <Mask>
-                                    <span>{item}</span>
-                                </Mask>
-                            </MenuLink>
-                        </MenuListItem>
-                    })}
-                </MenuList>
+                <FlexWrapper direction={'column'} justifyContent={'center'} gap={'50px'} >
+                    <MenuList>
+                        {props.menuItems.map((item, index) => {
+                            return <MenuListItem key={index}>
+                                <MenuLink href="">
+                                    {item}
+                                    <Mask>
+                                        <span>{item}</span>
+                                    </Mask>
+                                    <Mask>
+                                        <span>{item}</span>
+                                    </Mask>
+                                </MenuLink>
+                            </MenuListItem>
+                        })}
+                    </MenuList>
+                    <MobileMenuContact/>
+                </FlexWrapper>
             </MobileMenuPopup>
         </StyledMobileMenu>
     );
