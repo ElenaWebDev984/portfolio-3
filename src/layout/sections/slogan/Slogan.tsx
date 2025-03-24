@@ -10,8 +10,7 @@ export const Slogan = () => {
         <StyledSlogan>
            <Container>
                <FlexWrapper direction={'column'} alignItems={'center'} >
-                   <SloganText>More projects I’ve worked on:</SloganText>
-                   <SloganContact>@john-doe on github</SloganContact>
+                   <SloganText>More projects I’ve worked on: <span>@john-doe on github</span></SloganText>
                </FlexWrapper>
            </Container>
         </StyledSlogan>
@@ -23,19 +22,20 @@ const StyledSlogan = styled.section`
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     font-size: 58px;
+    text-align: center;
 `
 
 const SloganText = styled.p`
    
-`
-
-const SloganContact = styled.span`
-    background: ${theme.colors.linearGradientFont};
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
-    margin-top: 10px;
+    span {
+        background: ${theme.colors.linearGradientFont};
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+        margin-top: 10px;
+        white-space: nowrap;
+    }
 `
 
