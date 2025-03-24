@@ -33,7 +33,8 @@ export const theme = {
     },
 
 media:{
-        desktop:"screen and (max-width: 1100px)",
+        footer:"screen and (max-width: 1100px)",
+        desktop:"screen and (max-width: 900px)",
         tablet: "screen and (max-width: 768px)",
         mobile: "screen and (max-width: 576px)",
     },
