@@ -45,4 +45,8 @@ export const BtnGradient = styled.button<BtnGradientPropsType>`
         box-shadow: 40px 0 100px ${theme.colors.accentFont}, -40px 0 100px ${theme.colors.accentFont2};
         transform: translateY(-4px);
     }
+
+    @media ${theme.media.mobile} {
+        display: none;
+    }
 `
