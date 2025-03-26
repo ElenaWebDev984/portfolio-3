@@ -11,6 +11,7 @@ import projectImg6 from '../../../assets/images/proj6.webp';
 import {Container} from "../../../components/Container.tsx";
 import {TabMenu} from "./tabMenu/TabMenu.tsx";
 import {GridWrapper} from "../../../components/GridWrapper.tsx";
+import {theme} from "../../../styles/Theme.ts";
 
 
 export const tabItems = ['All', 'HTML', 'JavaScript', 'SASS', 'React',]
@@ -25,7 +26,7 @@ export const Projects = () => {
                 <SectionTitle>Projects</SectionTitle>
                 <SectionText>Things I’ve built so far</SectionText>
                 <TabMenu menuItems={tabItems}/>
-                <GridWrapper gridTemplateColumns={'repeat(3, 1fr)'} gap={'60px 35px'} >
+                <GridWrapper gridTemplateColumns={'repeat(3, 1fr)'} gap={'60px 35px'} justifyItems={'center'}>
                     <Project title={'Project Tile goes here'} text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} src={projectImg1} alt={'project1'} />
                     <Project title={'Project Tile goes here'} text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} src={projectImg2} alt={'project2'} />
                     <Project title={'Project Tile goes here'} text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} src={projectImg3} alt={'project3'} />
@@ -40,5 +41,12 @@ export const Projects = () => {
 
 const StyledProjects = styled.section`
     min-height: 100vh;
+
+    @media ${theme.media.desktop} {
+        ${GridWrapper} {
+            grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+            row-gap: 30px;
+        }
+    }
 `
 
