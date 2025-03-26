@@ -19,6 +19,8 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${theme.colors.primaryBgc};
         color: ${theme.colors.h2h3Font};
         line-height: 1.2;
+        
+        min-width: 360px;
     }
 
     a {
