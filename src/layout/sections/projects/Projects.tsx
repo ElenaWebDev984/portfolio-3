@@ -48,5 +48,11 @@ const StyledProjects = styled.section`
             row-gap: 30px;
         }
     }
+
+    @media ${theme.media.mobile} {
+        ${GridWrapper} {
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+    }
 `
 
