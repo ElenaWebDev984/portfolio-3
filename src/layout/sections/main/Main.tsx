@@ -34,6 +34,7 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
+    //padding-top: 70px;
     margin-top: 70px;
     min-height: 100vh;
     display: flex;
