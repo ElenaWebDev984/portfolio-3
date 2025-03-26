@@ -68,6 +68,36 @@ const StyledAboutGridWrapper = styled.div`
         background-color: ${theme.colors.borderFooter};
         opacity: 30%;
     }
+    
+    @media ${theme.media.tablet} {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+
+        & > :first-child {
+            grid-area: 1/1/2/2;
+        }
+
+        & > :nth-child(2) {
+            grid-area: 1/2/2/3;
+            justify-self: end;
+        }
+
+        & > :nth-child(3) {
+            grid-area: 2/1/3/2;
+            justify-self: start;
+        }
+
+        & > :nth-child(4) {
+            grid-area: 3/1/4/2;
+            justify-self: start;
+        }
+
+        & > :last-child {
+            grid-area: 4/1/5/2;
+            justify-self: start;
+        }
+
+    }
 `
 
 const Position = styled.p`
