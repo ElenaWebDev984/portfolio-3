@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Icon} from "../../../components/icon/Icon.tsx";
+import {theme} from "../../../styles/Theme.ts";
 
 
 export const MenuSocial = () => {
@@ -29,6 +30,10 @@ const StyledMenuSocial = styled.ul`
     display: flex;
     align-items: center;
     gap: 30px;
+
+    @media ${theme.media.tablet} {
+        gap: 10px;
+    }
 `
 
 const MenuSocialList = styled.li`
