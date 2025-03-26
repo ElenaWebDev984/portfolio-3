@@ -2,6 +2,18 @@ import styled from "styled-components";
 import {Icon} from "../icon/Icon.tsx";
 
 
+// type ContactListType = {
+//     links: LinksType[]
+// }
+//
+// type LinksType = {
+//     href: string
+//     iconId: string
+//     width: string
+//     height: string
+//     viewBox: string
+// }
+
 export const MenuContact = () => {
     return (
         <StyledMenuContact>
