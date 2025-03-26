@@ -37,7 +37,7 @@ export const GlobalStyle = createGlobalStyle`
     section {
         padding: 80px 0;
         
-        @media ${theme.media.tablet} {
+        @media ${theme.media.mobile} {
             padding: 60px 0;
         }
     }
