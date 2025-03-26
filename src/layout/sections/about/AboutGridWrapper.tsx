@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import {LocationWrapper} from "./LocationWrapper.tsx";
 import {theme} from "../../../styles/Theme.ts";
+import {font} from "../../../styles/Common.ts";
 
 
 type AboutGridWrapperPropsType = {
@@ -71,13 +72,11 @@ const StyledAboutGridWrapper = styled.div`
 
 const Position = styled.p`
     color: ${theme.colors.linkNavFont};
-    font-weight: 400;
-    font-size: 20px;
+    ${font({weight: 400, Fmax: 20, Fmin: 16})}
 `
 
 const Time = styled.small`
-    font-weight: 600;
-    font-size: 9px;
+    ${font({weight: 600, Fmax: 9, Fmin: 8})}
     color: ${theme.colors.accentFont2};
     display: inline-block;
     padding: 10px;
