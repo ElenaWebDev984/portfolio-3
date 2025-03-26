@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Link} from "../../../../components/Link.tsx";
+import {theme} from "../../../../styles/Theme.ts";
 
 type TabMenuPropsType = {
     gap?: string
@@ -21,7 +22,10 @@ export const TabMenu = (props: {menuItems: Array<string>}) => {
 };
 
 const StyledTabMenu = styled.nav<TabMenuPropsType>`
-    
+
+    @media ${theme.media.mobile} {
+        display: none;
+    }
 `
 
 const TabList = styled.ul<TabMenuPropsType>`
