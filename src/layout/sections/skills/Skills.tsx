@@ -4,6 +4,7 @@ import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {SectionText} from "../../../components/SectionText.tsx";
 import {Container} from "../../../components/Container.tsx";
 import { GridWrapper } from "../../../components/GridWrapper.tsx";
+import {theme} from "../../../styles/Theme.ts";
 
 
 export const Skills = () => {
@@ -33,6 +34,12 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
 
+    @media ${theme.media.desktop} {
+    ${GridWrapper} {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        row-gap: 60px;
+    }
+    }
 `
 
 
