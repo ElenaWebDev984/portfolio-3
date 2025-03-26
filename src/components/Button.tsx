@@ -27,11 +27,12 @@ export const Button = styled.button<ButtonPropsType>`
 
     &:hover {
         box-shadow: 40px 0 100px ${theme.colors.accentFont}, -40px 0 100px ${theme.colors.accentFont2};
-        animation: ${BtnAnimation} 2s ease-in-out;
+        // animation: ${BtnAnimation} 2s ease-in-out;
+        transform: translateY(-4px);
     }
 
     &:not(:hover) {
-        animation: ${BtnAnimationOut} 2s ease-in-out;
+        // animation: ${BtnAnimationOut} 2s ease-in-out;
     } 
 `
 
