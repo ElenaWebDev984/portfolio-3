@@ -39,7 +39,7 @@ const StyledMain = styled.section`
     margin-top: 70px;
     min-height: 100vh;
     display: flex;
-    ${font({weight: 700, Fmax: 58, Fmin: 36})}
+    ${font({weight: 700, Fmax: 58, Fmin: 32})}
     color: ${theme.colors.mainSectionFont};
     letter-spacing: -0.02em;
 `
@@ -54,7 +54,7 @@ const ContentMain = styled.div`
 
 const MainTitle = styled.h2`
     white-space: nowrap;
-    ${font({weight: 700, Fmax: 58, Fmin: 36})}
+    ${font({weight: 700, Fmax: 58, Fmin: 32})}
 
     span {
         background: ${theme.colors.linearGradientFont};
@@ -92,8 +92,8 @@ const Photo = styled.img`
     position: absolute;
 
     @media ${theme.media.mobile} {
-        width: 300px;
-        height: 300px;
+        width: 280px;
+        height: 280px;
     }
 `
 
@@ -113,8 +113,8 @@ const PhotoWrapper = styled.div`
     }
 
     @media ${theme.media.mobile} {
-        width: 300px;
-        height: 300px;
+        width: 280px;
+        height: 280px;
     }
     
     &::before {
