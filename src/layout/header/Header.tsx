@@ -9,6 +9,12 @@ import {HeaderMenu} from "./headerMenu/HeaderMenu.tsx";
 
 export const items = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact',]
 
+// export const links = [
+//     {iconId: 'github-contacts', href: '#', width: '30', height: '30', viewBox: '0 0 30 30'},
+//     {iconId: 'linkedin', href: '#', width: '30', height: '30', viewBox: '0 0 30 30'},
+//     {iconId: 'telegram', href: '#', width: '30', height: '30', viewBox: '0 0 30 30'},
+// ]
+
 export const Header = () => {
     return (
         <StyledHeader>

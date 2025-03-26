@@ -3,9 +3,15 @@ import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {Button} from "../../../components/Button.tsx";
 import {theme} from "../../../styles/Theme.ts";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {MenuContact} from "../../../components/menu/MenuContact.tsx";
 import { Container } from "../../../components/Container.tsx";
+import {MenuSocial} from "./MenuSocial.tsx";
 
+
+// export const links = [
+//     {iconId: 'email', href: '#', width: '40', height: '40', viewBox: '2 0 30 30'},
+//     {iconId: 'whatsapp', href: '#', width: '45', height: '45', viewBox: '-3 -2 30 30'},
+//     {iconId: 'discord', href: '#', width: '30', height: '30', viewBox: '0 0 30 30'},
+// ]
 
 export const Contact = () => {
     return (
@@ -20,7 +26,7 @@ export const Contact = () => {
                         <Field as={'textarea'} placeholder={'Message'}/>
                         <Button type={'submit'} width={'100%'} padding={'7px 15px'} marginBottom={'50px'} btnType={'primary'}>Send Message</Button>
                     </StyledForm>
-                    <MenuContact/>
+                    <MenuSocial />
                 </FlexWrapper>
             </Container>
         </StyledContact>
