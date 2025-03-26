@@ -68,6 +68,16 @@ const ImageWrapper = styled.div`
             opacity: 1;
         }
     }
+    
+    @media ${theme.media.tablet} {
+        &::before {
+            opacity: 1;
+        }
+
+        ${Button} {
+            opacity: 1;
+        }
+    }
 `
 
 const Image = styled.img`
