@@ -21,9 +21,8 @@ export const ProjectLinks = () => {
 
 const StyledProjectLinks = styled.div`
     display: flex;
-    margin-bottom: 25px;
-    gap: 50px;
-    //flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 `
 
 
