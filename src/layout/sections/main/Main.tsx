@@ -5,6 +5,7 @@ import {Button} from "../../../components/Button.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {theme} from "../../../styles/Theme.ts";
 import {BtnGradient} from "../../../components/BtnGradient.tsx";
+import {font} from "../../../styles/Common.ts";
 // import abstract from '../../../assets/images/AbstractMain.svg'
 
 export const Main = () => {
@@ -38,8 +39,7 @@ const StyledMain = styled.section`
     margin-top: 70px;
     min-height: 100vh;
     display: flex;
-    font-weight: 700;
-    font-size: 58px;
+    ${font({weight: 700, Fmax: 58, Fmin: 36})}
     color: ${theme.colors.mainSectionFont};
     letter-spacing: -0.02em;
 `
@@ -54,8 +54,7 @@ const ContentMain = styled.div`
 
 const MainTitle = styled.h2`
     white-space: nowrap;
-    font-weight: 700;
-    font-size: 58px;
+    ${font({weight: 700, Fmax: 58, Fmin: 36})}
 
     span {
         background: ${theme.colors.linearGradientFont};
@@ -70,15 +69,17 @@ const Greeting = styled.span`
 `
 
 const MainText = styled.p`
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
-    font-size: 42px;
+    ${font({family: "'DM Sans', sans-serif", weight: 500, Fmax: 42, Fmin: 30})}
     margin: 30px 0 40px;
 `
 
 const ButtonWrapper = styled.div`
     display: flex;
     gap: 40px;
+
+    @media ${theme.media.mobile} {
+       gap: 20px;
+    }
 `
 
 const Photo = styled.img`
@@ -90,10 +91,10 @@ const Photo = styled.img`
     //object-position: top;
     position: absolute;
 
-        // @media ${theme.media.desktop} {
-    //     width: 300px;
-    //     height: 300px;
-    // }
+    @media ${theme.media.mobile} {
+        width: 300px;
+        height: 300px;
+    }
 `
 
 const PhotoWrapper = styled.div`
@@ -110,12 +111,22 @@ const PhotoWrapper = styled.div`
     @media ${theme.media.footer} {
         margin: 0 auto;
     }
+
+    @media ${theme.media.mobile} {
+        width: 300px;
+        height: 300px;
+    }
     
     &::before {
         content: "";
         width: 350px;
         height: 350px;
         border-radius: 50%;
+
+        // @media ${theme.media.desktop} {
+        //     width: 300px;
+        //     height: 300px;
+        // }
     }
 `
 
