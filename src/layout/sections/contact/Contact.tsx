@@ -49,6 +49,13 @@ const StyledForm = styled.form`
         resize: none;
         height: 155px;
     }
+    
+    @media ${theme.media.tablet} {
+        ${Button} {
+            width: 180px;
+            height: 40px;
+        }
+    }
 `
 
 const Field = styled.input`
