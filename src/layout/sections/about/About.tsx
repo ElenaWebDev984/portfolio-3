@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Container} from "../../../components/Container.tsx";
 import {theme} from "../../../styles/Theme.ts";
 import {AboutGridWrapper} from "./AboutGridWrapper.tsx";
+import {font} from "../../../styles/Common.ts";
 
 
 
@@ -52,14 +53,12 @@ const AboutContent = styled.div`
 `
 
 const AboutSectionTitle = styled.h2`
-    font-weight: 700;
-    font-size: 42px;
+    ${font({weight: 700, Fmax: 42, Fmin: 30})}
     margin-bottom: 38px;
 `
 
 const AboutSectionText = styled.p`
-    font-weight: 400;
-    font-size: 18px;
+    ${font({weight: 400, Fmax: 18, Fmin: 12})}
     color: ${theme.colors.linkNavFont};
     padding-bottom: 40px;
 `
