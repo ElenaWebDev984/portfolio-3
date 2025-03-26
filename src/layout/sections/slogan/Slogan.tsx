@@ -19,7 +19,6 @@ export const Slogan = () => {
 };
 
 const StyledSlogan = styled.section`
-    min-height: 30vh;
     ${font({family: "'DM Sans', sans-serif", weight: 700, Fmax: 58, Fmin: 32})}
     text-align: center;
 `
