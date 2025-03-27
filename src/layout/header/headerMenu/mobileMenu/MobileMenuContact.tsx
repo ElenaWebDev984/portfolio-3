@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Icon} from "../../../components/icon/Icon.tsx";
+import {Icon} from "../../../../components/icon/Icon.tsx";
 
 
 
