@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {Link} from "../../../../components/Link.tsx";
 import {theme} from "../../../../styles/Theme.ts";
 
 type TabMenuPropsType = {
@@ -38,6 +37,20 @@ const TabList = styled.ul<TabMenuPropsType>`
 
 const ListItem = styled.li`
     
+`
+
+export const Link = styled.a`
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: ${theme.colors.linkNavFont};
+    padding: 10px;
+    // border: 1px solid ${theme.colors.accentFont2};
+    // border-radius: 5px;
+    
+    &:hover {
+        background-color: ${theme.colors.accentFont2};
+    }
 `
 
 
