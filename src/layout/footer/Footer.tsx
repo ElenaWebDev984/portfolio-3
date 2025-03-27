@@ -4,7 +4,7 @@ import {MenuContact} from "../../components/menu/MenuContact.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {items} from "../header/Header.tsx";
 import {Container} from "../../components/Container.tsx";
-import {HeaderMenu} from "../header/headerMenu/HeaderMenu.tsx";
+import {DesktopMenu} from "../header/headerMenu/desktopMenu/DesktopMenu.tsx";
 import {theme} from "../../styles/Theme.ts";
 import {font} from "../../styles/Common.ts";
 
@@ -18,7 +18,7 @@ export const Footer = () => {
                     <MenuContact/>
                 </PseudoWrapper>
                 <FlexWrapper justifyContent="space-between">
-                    <HeaderMenu menuItems={items}/>
+                    <DesktopMenu menuItems={items}/>
                     <Copyright>© 2025 Designed and built by <span>Elena</span> with <span>Love</span> & <span>Coffee</span></Copyright>
                 </FlexWrapper>
             </Container>
