@@ -6,9 +6,13 @@ import {theme} from "../../../styles/Theme.ts";
 
 const MenuList = styled.ul`
     display: flex;
-    flex-direction: column;
+  
     align-items: center;
     gap: 40px;
+    
+    @media (max-width: 768px) {
+        flex-direction: column; // for Mobile
+    }
 `
 
 const Mask = styled.span`
