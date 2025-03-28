@@ -34,6 +34,8 @@ const StyledAboutGridWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    
+    position: relative;
 
     & > :first-child {
         grid-area: 1/1/2/3;
@@ -63,10 +65,13 @@ const StyledAboutGridWrapper = styled.div`
     &::after {
         content: '';
         display: inline-block;
-        width: 320%;
+        left: 0;
+        right: 0;
+        bottom: -10px;
         height: 2px;
         background-color: ${theme.colors.borderFooter};
         opacity: 30%;
+        position: absolute;
     }
     
     @media ${theme.media.tablet} {
@@ -123,9 +128,8 @@ const Time = styled.small`
         border: 1px solid ${theme.colors.accentFont2};
 
         position: absolute;
-        //top: -3px;
-        bottom: 0;
-        z-index: -1;
+        bottom: 3px;
+        z-index: 1;
         left: 50%;
         transform: translateX(-50%);
     }
