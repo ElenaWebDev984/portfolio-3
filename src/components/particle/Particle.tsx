@@ -10,7 +10,7 @@ export const Particle = () => {
     }, []);
 
     const particlesLoaded = useCallback(async (container: Container | undefined) => {
-        await console.log(container);
+        console.log(container);
     }, []);
     return (
         <Particles
@@ -47,7 +47,7 @@ export const Particle = () => {
                     },
                     links: {
                         color: "#ffffff",
-                        distance: 150,
+                        distance: 200,
                         enable: true,
                         opacity: 0.5,
                         width: 0.5,
