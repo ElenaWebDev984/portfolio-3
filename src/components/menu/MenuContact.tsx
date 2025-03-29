@@ -1,37 +1,34 @@
 import styled from "styled-components";
 import {Icon} from "../icon/Icon.tsx";
+import * as React from "react";
 
+const contactItemsData = [
+    {
+        href: '#',
+        iconId: 'github-contacts',
+    },
+    {
+        href: '#',
+        iconId: 'linkedin',
+    },
+    {
+        href: '#',
+        iconId: 'telegram',
+    },
+]
 
-// type ContactListType = {
-//     links: LinksType[]
-// }
-//
-// type LinksType = {
-//     href: string
-//     iconId: string
-//     width: string
-//     height: string
-//     viewBox: string
-// }
-
-export const MenuContact = () => {
+export const MenuContact: React.FC = () => {
     return (
         <StyledMenuContact>
-            <MenuContactList>
-                <MenuContactLink href="">
-                    <Icon iconId={'github-contacts'} width={'30'} height={'30'} viewBox={'0 0 30 30'}/>
-                </MenuContactLink>
-            </MenuContactList>
-            <MenuContactList>
-                <MenuContactLink href="">
-                    <Icon iconId={'linkedin'} width={'30'} height={'30'} viewBox={'0 0 30 30'} />
-                </MenuContactLink>
-            </MenuContactList>
-            <MenuContactList>
-                <MenuContactLink href="">
-                    <Icon iconId={'telegram'} width={'30'} height={'30'} viewBox={'0 0 30 30'} />
-                </MenuContactLink>
-            </MenuContactList>
+            {contactItemsData.map((contactItemsData, index) => {
+                return (
+                    <MenuContactList key={index}>
+                        <MenuContactLink href={contactItemsData.href}>
+                            <Icon iconId={contactItemsData.iconId} width={'30'} height={'30'} viewBox={'0 0 30 30'}/>
+                        </MenuContactLink>
+                    </MenuContactList>
+                )
+            })}
         </StyledMenuContact>
     );
 };
@@ -50,7 +47,7 @@ const MenuContactList = styled.li`
 `
 
 const MenuContactLink = styled.a`
-    
+
 `
 
 
