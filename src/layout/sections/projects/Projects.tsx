@@ -16,6 +16,45 @@ import {theme} from "../../../styles/Theme.ts";
 
 export const tabItems = ['All', 'HTML', 'JavaScript', 'SASS', 'React',]
 
+const projectData = [
+    {
+        title: 'Project Tile goes here',
+        text: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+        src: projectImg1,
+        alt: 'project1',
+    },
+    {
+        title: 'Project Tile goes here',
+        text: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+        src: projectImg2,
+        alt: 'project2',
+    },
+    {
+        title: 'Project Tile goes here',
+        text: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+        src: projectImg3,
+        alt: 'project3',
+    },
+    {
+        title: 'Project Tile goes here',
+        text: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+        src: projectImg4,
+        alt: 'project4',
+    },
+    {
+        title: 'Project Tile goes here',
+        text: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+        src: projectImg5,
+        alt: 'project5',
+    },
+    {
+        title: 'Project Tile goes here',
+        text: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+        src: projectImg6,
+        alt: 'project6',
+    },
+]
+
 // export const stackItems = ['HTML', 'JavaScript', 'SASS', 'React',]
 
 
@@ -27,12 +66,9 @@ export const Projects = () => {
                 <SectionText>Things I’ve built so far</SectionText>
                 <TabMenu menuItems={tabItems}/>
                 <GridWrapper gridTemplateColumns={'repeat(3, 1fr)'} gap={'60px 35px'} justifyItems={'center'}>
-                    <Project title={'Project Tile goes here'} text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} src={projectImg1} alt={'project1'} />
-                    <Project title={'Project Tile goes here'} text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} src={projectImg2} alt={'project2'} />
-                    <Project title={'Project Tile goes here'} text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} src={projectImg3} alt={'project3'} />
-                    <Project title={'Project Tile goes here'} text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} src={projectImg4} alt={'project4'} />
-                    <Project title={'Project Tile goes here'} text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} src={projectImg5} alt={'project5'} />
-                    <Project title={'Project Tile goes here'} text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} src={projectImg6} alt={'project6'} />
+                    {projectData.map((project)=> {
+                        return  <Project title={project.title} text={project.text} src={project.src} alt={project.alt} />
+                    })}
                 </GridWrapper>
             </Container>
         </StyledProjects>
