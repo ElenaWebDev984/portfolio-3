@@ -3,7 +3,6 @@ import {font} from "../../../styles/Common.ts";
 import {theme} from "../../../styles/Theme.ts";
 
 const Main = styled.section`
-    //padding-top: 70px;
     margin-top: 70px;
     min-height: 100vh;
     display: flex;
@@ -13,6 +12,7 @@ const Main = styled.section`
 `
 
 const ContentMain = styled.div`
+    position: relative;
     max-width: 600px;
 
     @media ${theme.media.footer} {

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {Button} from "../../../components/Button.tsx";
 
 const Projects = styled.section`
+    position: relative;
     min-height: 100vh;
 
     @media ${theme.media.desktop} {

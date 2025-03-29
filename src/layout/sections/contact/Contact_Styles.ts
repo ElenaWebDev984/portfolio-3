@@ -3,7 +3,7 @@ import {theme} from "../../../styles/Theme.ts";
 import {Button} from "../../../components/Button.tsx";
 
 const Contact = styled.section`
-
+    position: relative;
 `
 
 const Form = styled.form`

@@ -20,6 +20,7 @@ export const Slogan: React.FC = () => {
 };
 
 const StyledSlogan = styled.section`
+    position: relative;
     ${font({family: "'DM Sans', sans-serif", weight: 700, Fmax: 58, Fmin: 32})}
     text-align: center;
 `

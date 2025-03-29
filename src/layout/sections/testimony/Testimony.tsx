@@ -24,5 +24,5 @@ export const Testimony: React.FC = () => {
 };
 
 const StyledTestimony = styled.section`
-    
+    position: relative;
 `

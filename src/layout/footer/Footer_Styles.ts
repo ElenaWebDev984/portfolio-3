@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {font} from "../../styles/Common.ts";
 
 const Footer = styled.footer`
+    position: relative;
     margin: 120px 0 60px;
     
     @media ${theme.media.tablet} {

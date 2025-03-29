@@ -100,6 +100,7 @@ export const Skills: React.FC = () => {
 };
 
 const StyledSkills = styled.section`
+    position: relative;
 
     @media ${theme.media.desktop} {
         ${GridWrapper} {

@@ -26,6 +26,7 @@ const About = styled.section`
 `
 
 const AboutContent = styled.div`
+    position: relative;
     max-width: 710px;
 `
 
