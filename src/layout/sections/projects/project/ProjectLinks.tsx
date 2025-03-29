@@ -1,38 +1,20 @@
-import styled from "styled-components";
-import {theme} from "../../../../styles/Theme.ts";
+import {S} from './../Projects_Styles.ts'
 import {Icon} from "../../../../components/icon/Icon.tsx";
 
 
 export const ProjectLinks = () => {
     return (
-        <StyledProjectLinks>
-            <ProjectLink href='#'>
+        <S.ProjectLinks>
+            <S.ProjectLink href='#'>
                 <Icon iconId={'chain-projects'} width={'20px'} height={'20px'} viewBox={'-5 -5 30 30'}/>
                 Live Preview
-            </ProjectLink>
-            <ProjectLink href='#'>
+            </S.ProjectLink>
+            <S.ProjectLink href='#'>
                 <Icon iconId={'github-projects'} width={'20px'} height={'20px'} viewBox={'-5 -5 30 30'}/>
                View Code
-            </ProjectLink>
-        </StyledProjectLinks>
+            </S.ProjectLink>
+        </S.ProjectLinks>
     );
 };
 
 
-const StyledProjectLinks = styled.div`
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-`
-
-
-const ProjectLink = styled.a`
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-    color: ${theme.colors.projectLinkFont};
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: underline;
-`
