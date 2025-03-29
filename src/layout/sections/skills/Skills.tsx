@@ -5,6 +5,7 @@ import {SectionText} from "../../../components/SectionText.tsx";
 import {Container} from "../../../components/Container.tsx";
 import { GridWrapper } from "../../../components/GridWrapper.tsx";
 import {theme} from "../../../styles/Theme.ts";
+import * as React from "react";
 
 
 const skillData = [
@@ -82,7 +83,7 @@ const skillData = [
     },
 ]
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
     return (
         <StyledSkills>
             <Container>

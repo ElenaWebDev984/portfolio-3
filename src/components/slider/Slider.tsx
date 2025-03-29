@@ -1,5 +1,6 @@
 import {S} from './Slider_Styles.ts'
 import {FlexWrapper} from "../FlexWrapper.tsx";
+import * as React from "react";
 
 
 type SliderPropsType = {
@@ -7,7 +8,7 @@ type SliderPropsType = {
     name?: string
 }
 
-export const Slider = (props: SliderPropsType) => {
+export const Slider: React.FC<SliderPropsType> = (props: SliderPropsType) => {
     return (
         <S.Slider>
             <FlexWrapper>

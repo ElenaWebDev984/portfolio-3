@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme.ts";
+import * as React from "react";
 
 
-export const Menu = (props: {menuItems: Array<string>}) => {
+export const Menu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
     return (
         <StyledMenu>
             <ul>
