@@ -3,10 +3,11 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {theme} from "../../../styles/Theme.ts";
 import { Container } from "../../../components/Container.tsx";
 import {font} from "../../../styles/Common.ts";
+import * as React from "react";
 
 
 
-export const Slogan = () => {
+export const Slogan: React.FC = () => {
     return (
         <StyledSlogan>
            <Container>
