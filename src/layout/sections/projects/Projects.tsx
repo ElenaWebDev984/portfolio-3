@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import {S} from './Projects_Styles.ts'
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {SectionText} from "../../../components/SectionText.tsx";
 import {Project} from "./project/Project.tsx";
@@ -11,7 +11,7 @@ import projectImg6 from '../../../assets/images/proj6.webp';
 import {Container} from "../../../components/Container.tsx";
 import {TabMenu} from "./tabMenu/TabMenu.tsx";
 import {GridWrapper} from "../../../components/GridWrapper.tsx";
-import {theme} from "../../../styles/Theme.ts";
+import * as React from "react";
 
 
 export const tabItems = ['All', 'HTML', 'JavaScript', 'SASS', 'React',]
@@ -58,9 +58,9 @@ const projectData = [
 // export const stackItems = ['HTML', 'JavaScript', 'SASS', 'React',]
 
 
-export const Projects = () => {
+export const Projects: React.FC = () => {
     return (
-        <StyledProjects>
+        <S.Projects>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <SectionText>Things I’ve built so far</SectionText>
@@ -71,24 +71,9 @@ export const Projects = () => {
                     })}
                 </GridWrapper>
             </Container>
-        </StyledProjects>
+        </S.Projects>
     );
 };
 
-const StyledProjects = styled.section`
-    min-height: 100vh;
 
-    @media ${theme.media.desktop} {
-        ${GridWrapper} {
-            grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-            row-gap: 30px;
-        }
-    }
-
-    @media ${theme.media.mobile} {
-        ${GridWrapper} {
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        }
-    }
-`
 
