@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import {S} from './Slider_Styles.ts'
 import {FlexWrapper} from "../FlexWrapper.tsx";
-import {theme} from "../../styles/Theme.ts";
+
 
 type SliderPropsType = {
     text?: string
@@ -9,62 +9,19 @@ type SliderPropsType = {
 
 export const Slider = (props: SliderPropsType) => {
     return (
-        <StyledSlider>
+        <S.Slider>
             <FlexWrapper>
-                <Slide>
-                    <Text>{props.text}</Text>
-                    <Name>{props.name}</Name>
-                </Slide>
+                <S.Slide>
+                    <S.Text>{props.text}</S.Text>
+                    <S.Name>{props.name}</S.Name>
+                </S.Slide>
             </FlexWrapper>
-            <Pagination>
+            <S.Pagination>
                 <span></span>
                 <span className={'active'}></span>
                 <span></span>
-            </Pagination>
-        </StyledSlider>
+            </S.Pagination>
+        </S.Slider>
     );
 };
 
-const StyledSlider = styled.div`
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`
-
-const Slide = styled.div`
-    text-align: center;
-`
-
-const Text = styled.p`
-
-`
-
-const Name = styled.span`
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin: 22px 0 42px;
-    display: inline-block;
-`
-
-const Pagination = styled.div`
-    
-    span {
-        display: inline-block;
-        background-color: ${theme.colors.linkNavFont};
-        width: 7px;
-        height: 7px;
-        
-        & + span {
-            margin-left: 5px;
-        }
-        
-        &.active {
-            background-color: ${theme.colors.accentFont2};
-            width: 20px;
-        }
-    }
-`
