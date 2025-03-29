@@ -1,5 +1,6 @@
 import {S} from './About_Styles.ts'
 import {LocationWrapper} from "./LocationWrapper.tsx";
+import * as React from "react";
 
 
 
@@ -12,7 +13,7 @@ type AboutGridWrapperPropsType = {
 }
 
 
-export const AboutGridWrapper = (props: AboutGridWrapperPropsType) => {
+export const AboutGridWrapper: React.FC<AboutGridWrapperPropsType> = (props: AboutGridWrapperPropsType) => {
     return (
         <S.AboutGridWrapper>
             <S.Position>{props.positionText}</S.Position>

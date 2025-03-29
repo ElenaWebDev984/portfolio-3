@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import {S} from './Contact_Styles.ts'
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {Button} from "../../../components/Button.tsx";
-import {theme} from "../../../styles/Theme.ts";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import { Container } from "../../../components/Container.tsx";
 import {MenuSocial} from "./MenuSocial.tsx";
+import * as React from "react";
 
 
 // export const links = [
@@ -13,68 +13,24 @@ import {MenuSocial} from "./MenuSocial.tsx";
 //     {iconId: 'discord', href: '#', width: '30', height: '30', viewBox: '0 0 30 30'},
 // ]
 
-export const Contact = () => {
+export const Contact: React.FC = () => {
     return (
-        <StyledContact>
+        <S.Contact>
             <Container>
                 <SectionTitle>Get in touch</SectionTitle>
                 <FlexWrapper direction={"column"} alignItems={'center'}>
-                    <StyledForm>
-                        <Field placeholder={'Name'}/>
-                        <Field placeholder={'Email'} type='email'/>
-                        <Field placeholder={'Subject'}/>
-                        <Field as={'textarea'} placeholder={'Message'}/>
+                    <S.Form>
+                        <S.Field placeholder={'Name'}/>
+                        <S.Field placeholder={'Email'} type='email'/>
+                        <S.Field placeholder={'Subject'}/>
+                        <S.Field as={'textarea'} placeholder={'Message'}/>
                         <Button type={'submit'} width={'100%'} padding={'7px 15px'} marginBottom={'50px'} btnType={'primary'}>Send Message</Button>
-                    </StyledForm>
+                    </S.Form>
                     <MenuSocial />
                 </FlexWrapper>
             </Container>
-        </StyledContact>
+        </S.Contact>
     );
 };
 
-const StyledContact = styled.section`
-
-`
-
-const StyledForm = styled.form`
-    width: 100%;
-    max-width: 540px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-
-    textarea {
-        resize: none;
-        height: 155px;
-    }
-    
-    @media ${theme.media.tablet} {
-        ${Button} {
-            width: 180px;
-            height: 40px;
-        }
-    }
-`
-
-const Field = styled.input`
-    background-color: ${theme.colors.projectBgc};
-    border: 1px solid ${theme.colors.borderForm};
-    color: ${theme.colors.h2h3Font};
-    border-radius: 5px;
-    line-height: 1.2;
-    width: 100%;
-    padding: 7px 15px;
-    letter-spacing: 0.05em;
-    font-family: Poppins, sans-serif; 
-    
-    &::placeholder {
-        color: ${theme.colors.linkNavFont};
-    }
-    
-    &:focus-visible {
-        outline: 1px solid ${theme.colors.accentFont2};
-    }
-`
 

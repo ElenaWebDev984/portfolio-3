@@ -1,10 +1,11 @@
 import {S} from './About_Styles.ts'
 import {Container} from "../../../components/Container.tsx";
 import {AboutGridWrapper} from "./AboutGridWrapper.tsx";
+import * as React from "react";
 
 
 
-export const About = () => {
+export const About: React.FC = () => {
     return (
         <S.About>
             <Container>
