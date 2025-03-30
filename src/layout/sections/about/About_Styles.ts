@@ -3,26 +3,28 @@ import {font} from "../../../styles/Common.ts";
 import {theme} from "../../../styles/Theme.ts";
 
 const About = styled.section`
-    //position: relative;
-    //
-    //&::after {
-    //    content: '';
-    //    width: 830px;
-    //    height: 830px;
-    //    top: 20%;
-    //    left: 70%;
-    //    transform: rotate(20deg);
-    //    opacity: 0.5;
-    //
-    //
-    //    background-image: url("../../../assets/images/pseudoAboutGradient.svg");
-    //    background-size: cover;
-    //    display: inline-block;
-    //    position: absolute;
-    //
-    //    outline: 5px solid red;
-    //    filter: brightness(0) invert(1) sepia(1) hue-rotate(180deg);
-    //}
+    position: relative;
+    overflow: clip;
+
+    &::after {
+        content: '';
+        width: 830px;
+        height: 830px;
+        top: 5%;
+        left: 60%;
+        transform: rotate(5deg);
+        opacity: 0.5;
+
+        background-image: url("./../../../../public/drawing.svg");
+        background-size: cover;
+        display: inline-block;
+        position: absolute;
+        z-index: 2;
+        
+        @media ${theme.media.tablet} {
+            display: none;
+        }
+    }
 `
 
 const AboutContent = styled.div`
