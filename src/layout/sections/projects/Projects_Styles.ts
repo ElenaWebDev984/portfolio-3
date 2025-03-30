@@ -9,16 +9,23 @@ const Projects = styled.section`
 
     @media ${theme.media.desktop} {
         ${GridWrapper} {
-            grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-            row-gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
         }
     }
 
-    @media ${theme.media.mobile} {
+    @media ${theme.media.tablet} {
         ${GridWrapper} {
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
         }
     }
+    //
+    // @media ${theme.media.mobile} {
+    //     ${GridWrapper} {
+    //         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    //     }
+    // }
 `
 
 //Project
