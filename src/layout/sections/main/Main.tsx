@@ -5,7 +5,7 @@ import {Button} from "../../../components/Button.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {BtnGradient} from "../../../components/BtnGradient.tsx";
 import * as React from "react";
-// import abstract from '../../../assets/images/AbstractMain.svg'
+
 
 export const Main: React.FC = () => {
     return (
