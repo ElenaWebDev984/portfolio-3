@@ -17,7 +17,6 @@ const Projects = styled.section`
     @media ${theme.media.tablet} {
         ${GridWrapper} {
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 20px;
         }
     }
     //
