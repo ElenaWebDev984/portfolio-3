@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {Icon} from "../icon/Icon.tsx";
 import * as React from "react";
+import { theme } from "../../styles/Theme.ts";
 
 const contactItemsData = [
     {
@@ -38,6 +39,10 @@ const StyledMenuContact = styled.ul`
     display: flex;
     align-items: center;
     gap: 20px;
+
+    @media ${theme.media.tablet} {
+        display: none;
+    }
 `
 
 const MenuContactList = styled.li`
