@@ -18,8 +18,8 @@ export const items = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact',]
 
 export const Header: React.FC = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
-    // const breakpoint = 768;
-    const breakpoint = 200;
+    const breakpoint = 768;
+    // const breakpoint = 200;
 
     React.useEffect(() => {
         const handleWindowResize = () => setWidth(window.innerWidth);
