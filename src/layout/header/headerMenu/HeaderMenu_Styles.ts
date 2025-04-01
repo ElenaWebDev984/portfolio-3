@@ -161,7 +161,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
 const DesktopMenu = styled.nav`
     
-    @media ${theme.media.footer} {
+    @media ${theme.media.desktop} {
         display: none;
     }
 `
