@@ -1,8 +1,9 @@
 import {S} from './../Projects_Styles.ts'
 import {Icon} from "../../../../components/icon/Icon.tsx";
+import * as React from "react";
 
 
-export const ProjectLinks = () => {
+export const ProjectLinks: React.FC = () => {
     return (
         <S.ProjectLinks>
             <S.ProjectLink href='#'>

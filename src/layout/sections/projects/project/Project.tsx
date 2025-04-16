@@ -1,6 +1,7 @@
 import {S} from './../Projects_Styles.ts'
 import {Button} from "../../../../components/Button.tsx";
 import * as React from "react";
+import {ProjectLinks} from "./ProjectLinks.tsx";
 
 
 type ProjectPropsType = {
@@ -22,7 +23,7 @@ export const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => 
                 <S.Title>{props.title}</S.Title>
                 <S.Text>{props.text}</S.Text>
                 <S.TechStacks><span>Tech stack : </span> HTML , JavaScript, SASS, React</S.TechStacks>
-                <S.ProjectLinks/>
+                <ProjectLinks/>
             </S.Content>
         </S.Project>
     );
