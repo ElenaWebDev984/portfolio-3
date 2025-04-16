@@ -1,27 +1,26 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {theme} from "../../../../styles/Theme.ts";
-import {TabMenuPropsType} from "./TabMenu.tsx";
 
-const TabMenu = styled.nav<TabMenuPropsType>`
+
+const TabMenu = styled.nav`
 
     @media ${theme.media.mobile} {
         display: none;
     }
 `
 
-const TabList = styled.ul<TabMenuPropsType>`
+const TabList = styled.ul`
     display: flex;
     justify-content: center;
-    gap: ${props => props.gap || '20px'};
-    margin-bottom: ${props => props.marginBottom || '40px'};
-    // TODO change gap and margin-bottom with props
+    gap: 20px;
+    margin-bottom: 40px;
 `
 
 const ListItem = styled.li`
     
 `
 
-export const Link = styled.a`
+export const Link = styled.a<{ active: boolean }>`
     font-weight: 400;
     font-size: 14px;
     text-transform: uppercase;
@@ -32,7 +31,11 @@ export const Link = styled.a`
     
     &:hover {
         background-color: ${theme.colors.accentFont2};
-    }
+
+        ${props => props.active && css<{active: boolean}>`
+        height: 10px;
+        `}
+    }   
 `
 
 
