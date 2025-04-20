@@ -14,9 +14,7 @@ export const Testimony: React.FC = () => {
                 <SectionTitle>Testimony</SectionTitle>
                 <FlexWrapper direction="column" alignItems="center">
                     <Icon iconId={'testimony'} viewBox={'-12 -12 50 50'}/>
-                    <Slider
-                        text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.'}
-                        name={'@ivan ivanow'}/>
+                    <Slider/>
                 </FlexWrapper>
             </Container>
         </StyledTestimony>
