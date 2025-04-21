@@ -1,0 +1,65 @@
+.alice-carousel__dots {
+    margin: 0;
+}
+
+.alice-carousel__dots-item:not(.__custom) {
+    display: inline-block;
+    background-color: rgba(167, 167, 167, 0.5);
+    width: 10px;
+    height: 10px;
+    border-radius: 0;
+}
+
+.alice-carousel__dots-item:not(.__custom):not(:last-child) {
+    margin-right: 10px;
+}
+
+.alice-carousel__dots-item:not(.__custom):hover {
+    background-color: rgba(231, 15, 170, 0.5);
+}
+
+.alice-carousel__dots-item:not(.__custom).__active {
+    background-color: rgba(231, 15, 170, 0.5);
+    width: 20px;
+}
+
+.alice-carousel__prev-btn-item,
+.alice-carousel__next-btn-item {
+    display: none;
+}
+
+
+
+
+/*.alice-carousel__prev-btn-item,*/
+/*.alice-carousel__next-btn-item {*/
+/*background-color: rgba(167, 167, 167, 0.5);*/
+/*padding: 0;*/
+/*position: absolute;*/
+/*top: 50%;*/
+/*display: flex;*/
+/*justify-content: center;*/
+/*align-items: center;*/
+
+/*:hover {*/
+/*    background-color: rgba(231, 15, 170, 0.5);*/
+/*}*/
+/*}*/
+
+/*.alice-carousel__prev-btn-item {*/
+/*    left: -50px;*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*}*/
+
+/*.alice-carousel__next-btn-item {*/
+/*    right: -50px;*/
+/*}*/
+
+/*.alice-carousel__prev-btn-item.__inactive,*/
+/*.alice-carousel__next-btn-item.__inactive  {*/
+/*    background-color: rgba(231, 15, 170, 0.5);*/
+/*:hover {*/
+/*    background-color: rgba(231, 15, 170, 0.5);*/
+/*}*/
+/*}*/
