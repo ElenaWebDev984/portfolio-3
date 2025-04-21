@@ -33,12 +33,6 @@ export const Slider = () => (
         <AliceCarousel
             mouseTracking
             items={items}
-            // renderPrevButton={() => {
-            //     return <Icon iconId={'arrow-left'}/>
-            // }}
-            // renderNextButton={() => {
-            //     return <Icon iconId={'arrow-right'}/>
-            // }}
         />
     </S.Slider>
 );
