@@ -1,6 +1,8 @@
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import {S} from './Slider_Styles';
+import './../../styles/slider.css';
+// import {Icon} from "../icon/Icon.tsx";
 
 
 type SliderPropsType = {
@@ -31,36 +33,14 @@ export const Slider = () => (
         <AliceCarousel
             mouseTracking
             items={items}
+            // renderPrevButton={() => {
+            //     return <Icon iconId={'arrow-left'}/>
+            // }}
+            // renderNextButton={() => {
+            //     return <Icon iconId={'arrow-right'}/>
+            // }}
         />
     </S.Slider>
 );
 
 
-// import {S} from './Slider_Styles.ts'
-// import {FlexWrapper} from "../FlexWrapper.tsx";
-// import * as React from "react";
-//
-//
-// type SliderPropsType = {
-//     text?: string
-//     name?: string
-// }
-//
-// export const Slider: React.FC<SliderPropsType> = (props: SliderPropsType) => {
-//     return (
-//         <S.Slider>
-//             <FlexWrapper>
-//                 <S.Slide>
-//                     <S.Text>{props.text}</S.Text>
-//                     <S.Name>{props.name}</S.Name>
-//                 </S.Slide>
-//             </FlexWrapper>
-//             <S.Pagination>
-//                 <span></span>
-//                 <span className={'active'}></span>
-//                 <span></span>
-//             </S.Pagination>
-//         </S.Slider>
-//     );
-// };
-//
