@@ -2,7 +2,7 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import {S} from './Slider_Styles';
 import './../../styles/slider.css';
-// import {Icon} from "../icon/Icon.tsx";
+import {Icon} from "../icon/Icon.tsx";
 
 
 type SliderPropsType = {
@@ -33,6 +33,12 @@ export const Slider = () => (
         <AliceCarousel
             mouseTracking
             items={items}
+            renderPrevButton={() => {
+                return <Icon iconId={'arrow-left'} width='30px' height='30px' viewBox='0 0 30 30'/>
+            }}
+            renderNextButton={() => {
+                return <Icon iconId={'arrow-right'} width='30px' height='30px' viewBox='0 0 30 30'/>
+            }}
         />
     </S.Slider>
 );
