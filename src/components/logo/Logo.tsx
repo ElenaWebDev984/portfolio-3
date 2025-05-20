@@ -1,10 +1,11 @@
 import {Icon} from "../icon/Icon.tsx";
 import * as React from "react";
+import {animateScroll as scroll} from "react-scroll";
 
 
 export const Logo: React.FC = () => {
     return (
-        <a href="#home">
+        <a onClick={() => {scroll.scrollToTop()}}>
            <Icon iconId={'logo-white'} />
         </a>
     );
