@@ -4,7 +4,7 @@ import * as React from "react";
 
 export const Logo: React.FC = () => {
     return (
-        <a href="">
+        <a href="#home">
            <Icon iconId={'logo-white'} />
         </a>
     );
