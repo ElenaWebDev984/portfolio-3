@@ -6,6 +6,7 @@ import {Container} from "../../../components/Container.tsx";
 import {BtnGradient} from "../../../components/BtnGradient.tsx";
 import * as React from "react";
 import Typewriter from 'typewriter-effect';
+import Tilt from 'react-parallax-tilt';
 
 
 export const Main: React.FC = () => {
@@ -15,7 +16,6 @@ export const Main: React.FC = () => {
                 <FlexWrapper justifyContent={'space-between'} alignItems={'center'} gap={'20px'} wrap={'wrap'}>
                     <S.ContentMain>
                         <S.Greeting>Hi there! 👋</S.Greeting>
-                        {/*<S.MainTitle>I'm <span>Elena</span><br/>a <span>web developer</span></S.MainTitle>*/}
                         <S.MainTitle>I'm <span>Elena</span><br/></S.MainTitle>
                         <S.MainTitle>
                             <Typewriter
@@ -35,10 +35,21 @@ export const Main: React.FC = () => {
                                 CV</BtnGradient>
                         </S.ButtonWrapper>
                     </S.ContentMain>
-                    <S.PhotoWrapper>
-                        <S.Photo src={photo} alt="web developer portfolio"/>
-                        {/*<AbstractSvg src={abstract} alt="frontend developer"/>*/}
-                    </S.PhotoWrapper>
+                    <Tilt className="parallax-effect-img"
+                          tiltMaxAngleX={40}
+                          tiltMaxAngleY={40}
+                          perspective={800}
+                          transitionSpeed={1500}
+                          scale={1.1}
+                          gyroscope={true}>
+                        <S.PhotoWrapper>
+                            <S.Photo src={photo} alt="web developer portfolio"/>
+                        </S.PhotoWrapper>
+                    </Tilt>
+                    {/*<S.PhotoWrapper>*/}
+                    {/*    <S.Photo src={photo} alt="web developer portfolio"/>*/}
+                    {/*    /!*<AbstractSvg src={abstract} alt="frontend developer"/>*!/*/}
+                    {/*</S.PhotoWrapper>*/}
                 </FlexWrapper>
             </Container>
         </S.Main>
