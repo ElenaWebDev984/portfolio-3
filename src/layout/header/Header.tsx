@@ -12,6 +12,10 @@ import {S} from './Header_Styles.ts'
 
 export const items = [
     {
+        title: "Home",
+        href: "home",
+    },
+    {
         title: "About",
         href: "about",
     },
