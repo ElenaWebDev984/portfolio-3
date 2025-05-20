@@ -1,13 +1,14 @@
 import {S} from './../HeaderMenu_Styles.ts'
 import * as React from "react";
-import {Menu} from "../menu/Menu.tsx";
+import {Menu, MenuProps} from "../menu/Menu.tsx";
 
 
 
-export const DesktopMenu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
+
+export const DesktopMenu: React.FC<MenuProps> = ({menuItems}) => {
     return (
         <S.DesktopMenu>
-            <Menu menuItems={props.menuItems} />
+            <Menu menuItems={menuItems} />
         </S.DesktopMenu>
     );
 };

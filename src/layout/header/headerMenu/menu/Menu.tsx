@@ -1,16 +1,23 @@
 import * as React from "react";
 import {S} from './../HeaderMenu_Styles.ts'
+import {MenuItemType} from "../../Header.tsx";
 
 
-export const Menu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
+export type MenuProps = {
+    menuItems: MenuItemType[]
+}
+
+export const Menu: React.FC<MenuProps> = ({menuItems}) => {
     return (
         <S.MenuList>
-            {props.menuItems.map((item, index) => {
-                return <S.MenuListItem key={index}>
-                    <S.MenuLink activeClass="active"
-                                to={item.href}
-                                spy={true}
-                                smooth={true}>
+            {menuItems.map((item, index) => (
+                <S.MenuListItem key={index}>
+                    <S.MenuLink
+                        activeClass="active"
+                        to={item.href}
+                        spy={true}
+                        smooth={true}
+                    >
                         {item.title}
                         <S.Mask>
                             <span>{item.title}</span>
@@ -20,7 +27,7 @@ export const Menu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems:
                         </S.Mask>
                     </S.MenuLink>
                 </S.MenuListItem>
-            })}
+            ))}
         </S.MenuList>
     );
 };
