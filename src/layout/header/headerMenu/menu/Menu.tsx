@@ -2,12 +2,15 @@ import * as React from "react";
 import {S} from './../HeaderMenu_Styles.ts'
 
 
-export const Menu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
+export const Menu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
     return (
         <S.MenuList>
             {props.menuItems.map((item, index) => {
-                return  <S.MenuListItem key={index}>
-                    <S.MenuLink href={`#${item.href}`}>
+                return <S.MenuListItem key={index}>
+                    <S.MenuLink activeClass="active"
+                                to={item.href}
+                                spy={true}
+                                smooth={true}>
                         {item.title}
                         <S.Mask>
                             <span>{item.title}</span>

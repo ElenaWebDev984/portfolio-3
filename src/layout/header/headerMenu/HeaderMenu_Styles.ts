@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme.ts";
+import {Link} from "react-scroll";
 
 
 //  Menu
@@ -53,7 +54,8 @@ const MenuListItem = styled.li`
         transform: scale(0);
     }
 
-    &:hover {
+    &:hover,
+    &:active {
         &::before {
             transform: scale(1);
         }
@@ -69,7 +71,7 @@ const MenuListItem = styled.li`
     }
 `
 
-const MenuLink = styled.a`
+const MenuLink = styled(Link)`
     font-family: 'DM Sans', sans-serif;
     font-weight: 500;
     font-size: 20px;
