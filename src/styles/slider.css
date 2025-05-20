@@ -23,9 +23,25 @@
     width: 20px;
 }
 
-.alice-carousel__prev-btn-item,
+/*.alice-carousel__prev-btn-item,*/
+/*.alice-carousel__next-btn-item {*/
+/*    display: none;*/
+/*}*/
+
+.alice-carousel__prev-btn-item {
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    width: max-content;
+    /*width: 30px;*/
+    /*height: 30px;*/
+}
+
 .alice-carousel__next-btn-item {
-    display: none;
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    width: max-content;
 }
 
 
