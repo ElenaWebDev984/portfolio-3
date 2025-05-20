@@ -5,6 +5,7 @@ import {Button} from "../../../components/Button.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {BtnGradient} from "../../../components/BtnGradient.tsx";
 import * as React from "react";
+import Typewriter from 'typewriter-effect';
 
 
 export const Main: React.FC = () => {
@@ -14,7 +15,18 @@ export const Main: React.FC = () => {
                 <FlexWrapper justifyContent={'space-between'} alignItems={'center'} gap={'20px'} wrap={'wrap'}>
                     <S.ContentMain>
                         <S.Greeting>Hi there! 👋</S.Greeting>
-                        <S.MainTitle>I'm <span>Elena</span><br/>a <span>web developer</span></S.MainTitle>
+                        {/*<S.MainTitle>I'm <span>Elena</span><br/>a <span>web developer</span></S.MainTitle>*/}
+                        <S.MainTitle>I'm <span>Elena</span><br/></S.MainTitle>
+                        <S.MainTitle>
+                            <Typewriter
+                                options={{
+                                    strings: ['a web developer'],
+                                    autoStart: true,
+                                    loop: true,
+                                    delay: 100,
+                                }}
+                            />
+                        </S.MainTitle>
                         <S.MainText>I craft responsive websites where technologies meet creativity</S.MainText>
                         <S.ButtonWrapper>
                             <Button as='a' href={'#'} padding={'8px 16px'} width={'150px'} height={'40px'}
@@ -32,3 +44,5 @@ export const Main: React.FC = () => {
         </S.Main>
     );
 };
+
+
