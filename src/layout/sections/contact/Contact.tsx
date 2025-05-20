@@ -15,7 +15,7 @@ import * as React from "react";
 
 export const Contact: React.FC = () => {
     return (
-        <S.Contact>
+        <S.Contact id='contact'>
             <Container>
                 <SectionTitle>Get in touch</SectionTitle>
                 <FlexWrapper direction={"column"} alignItems={'center'}>

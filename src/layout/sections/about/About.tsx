@@ -7,7 +7,7 @@ import * as React from "react";
 
 export const About: React.FC = () => {
     return (
-        <S.About>
+        <S.About id='about'>
             <Container>
                 <S.AboutContent>
                     <S.AboutSectionTitle>About Me</S.AboutSectionTitle>
