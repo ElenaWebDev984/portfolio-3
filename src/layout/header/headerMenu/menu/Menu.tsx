@@ -7,13 +7,13 @@ export const Menu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Ar
         <S.MenuList>
             {props.menuItems.map((item, index) => {
                 return  <S.MenuListItem key={index}>
-                    <S.MenuLink href="">
-                        {item}
+                    <S.MenuLink href={`#${item.href}`}>
+                        {item.title}
                         <S.Mask>
-                            <span>{item}</span>
+                            <span>{item.title}</span>
                         </S.Mask>
                         <S.Mask>
-                            <span>{item}</span>
+                            <span>{item.title}</span>
                         </S.Mask>
                     </S.MenuLink>
                 </S.MenuListItem>
