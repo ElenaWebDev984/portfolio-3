@@ -3,9 +3,12 @@ import {Icon} from "../../../components/icon/Icon.tsx";
 import {theme} from "../../../styles/Theme.ts";
 
 const contactSocialData = [
-    {href: '#', iconId: 'email', target: '_blank'},
-    {href: '#', iconId: 'whatsapp', target: '_blank'},
+    {href: 'mailto:test@yahoo.com', iconId: 'email', target: '_blank'},
+    {href: 'https://wa.me/9999999999', iconId: 'whatsapp', target: '_blank'},
     {href: 'https://discord.com/', iconId: 'discord', target: '_blank'},
+    // {href: 'mailto:your-email@example.com', iconId: 'email', target: '_blank'},
+    // {href: 'tel:+1234567890', iconId: 'whatsapp', target: '_blank'},
+    // {href: 'https://wa.me/1234567890', iconId: 'whatsapp', target: '_blank'}
 ]
 
 export const MenuSocial = () => {
