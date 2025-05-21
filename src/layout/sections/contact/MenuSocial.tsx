@@ -2,25 +2,24 @@ import styled from "styled-components";
 import {Icon} from "../../../components/icon/Icon.tsx";
 import {theme} from "../../../styles/Theme.ts";
 
+const contactSocialData = [
+    {href: '#', iconId: 'email', target: '_blank'},
+    {href: '#', iconId: 'whatsapp', target: '_blank'},
+    {href: 'https://discord.com/', iconId: 'discord', target: '_blank'},
+]
 
 export const MenuSocial = () => {
     return (
         <StyledMenuSocial>
-            <MenuSocialList>
-                <MenuSocialLink href="#" target='_blank'>
-                    <Icon iconId={'email'} width={'40'} height={'40'} viewBox={'2 0 30 30'} />
-                </MenuSocialLink>
-            </MenuSocialList>
-            <MenuSocialList>
-                <MenuSocialLink href="#" target='_blank'>
-                    <Icon iconId={'whatsapp'} width={'45'} height={'45'} viewBox={'-3 -2 30 30'}/>
-                </MenuSocialLink>
-            </MenuSocialList>
-            <MenuSocialList>
-                <MenuSocialLink href="https://discord.com/" target='_blank'>
-                    <Icon iconId={'discord'} width={'40'} height={'40'} viewBox={'0 0 30 30'} />
-                </MenuSocialLink>
-            </MenuSocialList>
+            {contactSocialData.map((contactSocialData, index) => {
+                return (
+                    <MenuSocialList key={index}>
+                        <MenuSocialLink href={contactSocialData.href} target={contactSocialData.target}>
+                            <Icon iconId={contactSocialData.iconId} width={'40'} height={'40'} viewBox={'2 0 30 30'} />
+                        </MenuSocialLink>
+                    </MenuSocialList>
+                )
+            })}
         </StyledMenuSocial>
     );
 };
