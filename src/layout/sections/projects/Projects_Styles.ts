@@ -44,7 +44,8 @@ const ImageWrapper = styled.div`
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -40%);
+        transition: ${theme.animations.transition};
     }
 
     &::before {
@@ -57,6 +58,7 @@ const ImageWrapper = styled.div`
         background: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(4);
         opacity: 0;
+        transition: ${theme.animations.transition};
     }
 
     &:hover {
@@ -66,6 +68,7 @@ const ImageWrapper = styled.div`
 
         ${Button} {
             opacity: 1;
+            transform: translate(-50%, -50%);
         }
     }
     
