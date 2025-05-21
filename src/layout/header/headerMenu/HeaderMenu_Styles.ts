@@ -23,8 +23,8 @@ const Mask = styled.span`
     display: inline-block;
     height: 50%;
     overflow-y: hidden;
-    //outline: 1px solid rebeccapurple;
     color: ${theme.colors.accentFont2};
+    transition: ${theme.animations.transition};
 
     & + & {
         top: 50%;
@@ -52,6 +52,7 @@ const MenuListItem = styled.li`
         z-index: 1;
         
         transform: scale(0);
+        transition: ${theme.animations.transition};
     }
 
     &:hover,

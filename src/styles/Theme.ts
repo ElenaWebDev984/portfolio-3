@@ -39,4 +39,8 @@ media:{
         mobile: "screen and (max-width: 576px)",
     },
 
+    animations: {
+        transition: '0.2s ease-in-out',
+    }
+
 }
