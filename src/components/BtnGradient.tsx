@@ -44,6 +44,7 @@ export const BtnGradient = styled.button<BtnGradientPropsType>`
         z-index: 0;
         box-shadow: 40px 0 100px ${theme.colors.accentFont}, -40px 0 100px ${theme.colors.accentFont2};
         transform: translateY(-4px);
+        transition: ${theme.animations.transition};
     }
 
     @media ${theme.media.mobile} {

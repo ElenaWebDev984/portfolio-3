@@ -43,6 +43,7 @@ const MenuSocialList = styled.li`
     
     &:hover {
         transform: translateY(-4px);
+        transition: ${theme.animations.transition};
     }
 `
 

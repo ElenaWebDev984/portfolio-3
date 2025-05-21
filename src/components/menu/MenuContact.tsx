@@ -4,18 +4,9 @@ import * as React from "react";
 import { theme } from "../../styles/Theme.ts";
 
 const contactItemsData = [
-    {
-        href: '#',
-        iconId: 'github-contacts',
-    },
-    {
-        href: '#',
-        iconId: 'linkedin',
-    },
-    {
-        href: '#',
-        iconId: 'telegram',
-    },
+    {href: '#', iconId: 'github-contacts',},
+    {href: '#', iconId: 'linkedin',},
+    {href: '#', iconId: 'telegram',},
 ]
 
 export const MenuContact: React.FC = () => {
@@ -48,6 +39,7 @@ const StyledMenuContact = styled.ul`
 const MenuContactList = styled.li`
     &:hover {
         transform: translateY(-4px);
+        transition: ${theme.animations.transition};
     }
 `
 
