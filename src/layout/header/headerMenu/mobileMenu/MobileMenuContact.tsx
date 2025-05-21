@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Icon} from "../../../../components/icon/Icon.tsx";
+import {theme} from "../../../../styles/Theme.ts";
 
 
 
@@ -35,6 +36,7 @@ const StyledMobileMenuContact = styled.ul`
 const MenuContactList = styled.li`
     &:hover {
         transform: translateY(-4px);
+        transition: ${theme.animations.transition};
     }
 `
 

@@ -100,13 +100,15 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     z-index: 999;
     background: rgba(25, 25, 25, 0.9);
     display: none;
+    transform: translateY(-100%);
+    transition: 1s ease-in-out;
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
         display: flex;
         justify-content: center;
         align-items: center;
+        transform: translateY(0);
     `}
-
 `
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
