@@ -5,30 +5,30 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import { Container } from "../../../components/Container.tsx";
 import {MenuSocial} from "./MenuSocial.tsx";
 import emailjs from '@emailjs/browser';
-import {ElementRef, useRef} from "react";
+import {ElementRef, useRef, FormEvent} from "react";
 
-
-export const Contact: () => void = () => {
+export const Contact = () => {
     const form = useRef<ElementRef<'form'>>(null);
 
-    const sendEmail = (e: any) => {
+    const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        if (!form.current) return
+        console.log("Form submitted!");
+        if (!form.current) return;
 
-        emailjs
-            .sendForm('service_p2q2ayn', 'template_4nggg5o', form.current, {
-                publicKey: 'giHlu8lY-4mdkicoN9CX-',
-            })
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                },
-                (error) => {
-                    console.log('FAILED...', error.text);
-                },
+        console.log("Sending email...");
+        try {
+            const result = await emailjs.sendForm(
+                'service_p2q2ayn',
+                'template_4nggg5o',
+                form.current,
+                'lMxnNoRnNKj7l-yCR'
             );
-        e.target.reset();
+            console.log("Email sent!", result);
+        } catch (error) {
+            console.error("Email send error:", error);
+        }
+    };
 
     return (
         <S.Contact id='contact'>
@@ -47,4 +47,4 @@ export const Contact: () => void = () => {
             </Container>
         </S.Contact>
     );
-}};
+};
