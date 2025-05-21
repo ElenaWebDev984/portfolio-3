@@ -32,6 +32,7 @@ export const Link = styled.a<{ active: boolean }>`
     color: ${theme.colors.linkNavFont};
     padding: 10px;
     //height: 5px;
+    cursor: pointer;
 
     &:hover {
         // background-color: ${theme.colors.accentFont2};

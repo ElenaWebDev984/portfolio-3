@@ -78,6 +78,7 @@ const MenuLink = styled(Link)`
     font-size: 20px;
     text-align: center;
     color: transparent;
+    cursor: pointer;
 `
 
 
