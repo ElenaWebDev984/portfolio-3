@@ -31,8 +31,8 @@ const Projects = styled.section`
 
 const Project = styled.article`
     background: ${theme.colors.projectBgc};
-    max-width: 375px;
-    width: 100%;
+    //max-width: 375px;
+    //width: 100%;
     border-radius: 20px;
 `
 
