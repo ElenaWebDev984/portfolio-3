@@ -7,6 +7,7 @@ import {BtnGradient} from "../../../components/BtnGradient.tsx";
 import * as React from "react";
 import Typewriter from 'typewriter-effect';
 import Tilt from 'react-parallax-tilt';
+import cvPdf from '../../../assets/CV_test.pdf'
 
 
 export const Main: React.FC = () => {
@@ -29,9 +30,9 @@ export const Main: React.FC = () => {
                         </S.MainTitle>
                         <S.MainText>I craft responsive websites where technologies meet creativity</S.MainText>
                         <S.ButtonWrapper>
-                            <Button as='a' href={'#'} padding={'8px 16px'} width={'150px'} height={'40px'}
+                            <Button as='a' href={'#contact'} padding={'8px 16px'} width={'150px'} height={'40px'}
                                     btnType={'primary'}>Contact me!!!</Button>
-                            <BtnGradient as='a' href={'#'} padding={'8px 16px'} width={'150px'} height={'40px'}>Download
+                            <BtnGradient as='a' href={cvPdf} padding={'8px 16px'} width={'150px'} height={'40px'}>Download
                                 CV</BtnGradient>
                         </S.ButtonWrapper>
                     </S.ContentMain>
