@@ -7,17 +7,17 @@ export const MenuSocial = () => {
     return (
         <StyledMenuSocial>
             <MenuSocialList>
-                <MenuSocialLink href="">
+                <MenuSocialLink href="#" target='_blank'>
                     <Icon iconId={'email'} width={'40'} height={'40'} viewBox={'2 0 30 30'} />
                 </MenuSocialLink>
             </MenuSocialList>
             <MenuSocialList>
-                <MenuSocialLink href="">
+                <MenuSocialLink href="#" target='_blank'>
                     <Icon iconId={'whatsapp'} width={'45'} height={'45'} viewBox={'-3 -2 30 30'}/>
                 </MenuSocialLink>
             </MenuSocialList>
             <MenuSocialList>
-                <MenuSocialLink href="">
+                <MenuSocialLink href="https://discord.com/" target='_blank'>
                     <Icon iconId={'discord'} width={'40'} height={'40'} viewBox={'0 0 30 30'} />
                 </MenuSocialLink>
             </MenuSocialList>

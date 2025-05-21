@@ -4,9 +4,9 @@ import * as React from "react";
 import { theme } from "../../styles/Theme.ts";
 
 const contactItemsData = [
-    {href: '#', iconId: 'github-contacts',},
-    {href: '#', iconId: 'linkedin',},
-    {href: '#', iconId: 'telegram',},
+    {href: 'https://github.com/ElenaWebDev984', iconId: 'github-contacts', target: '_blank'},
+    {href: 'https://www.linkedin.com/', iconId: 'linkedin', target: '_blank'},
+    {href: 'https://t.me/alexprimero999', iconId: 'telegram', target: '_blank'},
 ]
 
 export const MenuContact: React.FC = () => {
@@ -15,7 +15,7 @@ export const MenuContact: React.FC = () => {
             {contactItemsData.map((contactItemsData, index) => {
                 return (
                     <MenuContactList key={index}>
-                        <MenuContactLink href={contactItemsData.href}>
+                        <MenuContactLink href={contactItemsData.href} target={contactItemsData.target}>
                             <Icon iconId={contactItemsData.iconId} width={'30'} height={'30'} viewBox={'0 0 30 30'}/>
                         </MenuContactLink>
                     </MenuContactList>
@@ -44,7 +44,7 @@ const MenuContactList = styled.li`
 `
 
 const MenuContactLink = styled.a`
-
+    
 `
 
 
