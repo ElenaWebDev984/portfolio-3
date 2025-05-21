@@ -13,8 +13,10 @@ import {TabMenu, TabsStatusType} from "./tabMenu/TabMenu.tsx";
 import {GridWrapper} from "../../../components/GridWrapper.tsx";
 import * as React from "react";
 import {useState} from "react";
+import {AnimatePresence, motion} from 'motion/react';
 
-const tabItems: Array<{status: TabsStatusType, title: string}> = [
+
+const tabItems: Array<{ status: TabsStatusType, title: string }> = [
     {
         title: 'All',
         status: 'all',
@@ -44,6 +46,7 @@ const projectsData = [
         src: projectImg1,
         alt: 'project1',
         type: 'HTML',
+        id: 1,
     },
     {
         title: 'Project Tile goes here',
@@ -51,6 +54,7 @@ const projectsData = [
         src: projectImg2,
         alt: 'project2',
         type: 'SASS',
+        id: 2,
     },
     {
         title: 'Project Tile goes here',
@@ -58,6 +62,7 @@ const projectsData = [
         src: projectImg3,
         alt: 'project3',
         type: 'JavaScript',
+        id: 3,
     },
     {
         title: 'Project Tile goes here',
@@ -65,6 +70,7 @@ const projectsData = [
         src: projectImg4,
         alt: 'project4',
         type: 'JavaScript',
+        id: 4,
     },
     {
         title: 'Project Tile goes here',
@@ -72,6 +78,7 @@ const projectsData = [
         src: projectImg5,
         alt: 'project5',
         type: 'React',
+        id: 5,
     },
     {
         title: 'Project Tile goes here',
@@ -79,6 +86,7 @@ const projectsData = [
         src: projectImg6,
         alt: 'project6',
         type: 'React',
+        id: 6,
     },
 ]
 
@@ -87,16 +95,16 @@ export const Projects: React.FC = () => {
     const [currentFilterStatus, setCurrentFilterStatus] = useState('all')
     let filteredProjects = projectsData
 
-    if(currentFilterStatus === 'HTML') {
+    if (currentFilterStatus === 'HTML') {
         filteredProjects = projectsData.filter(project => project.type === 'HTML')
     }
-    if(currentFilterStatus === 'JavaScript') {
+    if (currentFilterStatus === 'JavaScript') {
         filteredProjects = projectsData.filter(project => project.type === 'JavaScript')
     }
-    if(currentFilterStatus === 'SASS') {
+    if (currentFilterStatus === 'SASS') {
         filteredProjects = projectsData.filter(project => project.type === 'SASS')
     }
-    if(currentFilterStatus === 'React') {
+    if (currentFilterStatus === 'React') {
         filteredProjects = projectsData.filter(project => project.type === 'React')
     }
 
@@ -111,11 +119,29 @@ export const Projects: React.FC = () => {
                 <SectionTitle>Projects</SectionTitle>
                 <SectionText>Things I’ve built so far</SectionText>
                 <TabMenu tabItems={tabItems} changeFilterStatus={changeFilterStatus}
-                currentFilterStatus={currentFilterStatus}/>
+                         currentFilterStatus={currentFilterStatus}/>
                 <GridWrapper gridTemplateColumns={'repeat(3, 1fr)'} gap={'60px 35px'} justifyItems={'center'}>
-                    {filteredProjects.map((project)=> {
-                        return  <Project title={project.title} text={project.text} src={project.src} alt={project.alt} />
-                    })}
+
+                    <AnimatePresence>
+                        {filteredProjects.map((project) => {
+                            return (
+                                <motion.div style={{width: '100%', "maxWidth": "375px"}}
+                                    layout
+                                    initial={{opacity: 0}}
+                                    animate={{opacity: 1}}
+                                    exit={{opacity: 1}}
+                                    key={project.id}>
+
+                                    <Project title={project.title}
+                                             text={project.text}
+                                             src={project.src}
+                                             alt={project.alt}
+                                             key={project.id}/>
+                                </motion.div>
+                            )
+                        })}
+                    </AnimatePresence>
+
                 </GridWrapper>
             </Container>
         </S.Projects>
