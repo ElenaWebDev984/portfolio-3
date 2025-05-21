@@ -26,16 +26,20 @@ export const Link = styled.a<{ active: boolean }>`
     text-transform: uppercase;
     color: ${theme.colors.linkNavFont};
     padding: 10px;
-    // border: 1px solid ${theme.colors.accentFont2};
-    // border-radius: 5px;
-    
-    &:hover {
-        background-color: ${theme.colors.accentFont2};
+    //height: 5px;
 
-        ${props => props.active && css<{active: boolean}>`
-        height: 10px;
-        `}
-    }   
+    &:hover {
+        // background-color: ${theme.colors.accentFont2};
+        border: 1px solid ${theme.colors.accentFont2};
+         border-radius: 5px;
+        transition: ${theme.animations.transition};
+    }
+
+    ${props => props.active && css<{ active: boolean }>`
+        // border-bottom: 5px solid ${theme.colors.accentFont2};
+        border: 1px solid ${theme.colors.accentFont2};
+        border-radius: 5px;
+    `}
 `
 
 
