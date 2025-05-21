@@ -8,6 +8,7 @@
     width: 10px;
     height: 10px;
     border-radius: 0;
+    transition: 0.2s ease-in-out;
 }
 
 .alice-carousel__dots-item:not(.__custom):not(:last-child) {
