@@ -5,7 +5,12 @@ import {theme} from "../../../../styles/Theme.ts";
 const TabMenu = styled.nav`
 
     @media ${theme.media.mobile} {
-        display: none;
+        //display: none;
+        
+        ul {
+            gap: 5px;
+            margin-bottom: 20px;
+        }
     }
 `
 
